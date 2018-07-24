@@ -35,6 +35,7 @@ const renderer = {
 	},
 };
 
+// TODO: extend Strand and make it run more of its internals through redux
 const strand = new Strand({
 	renderer,
 	source,
