@@ -1,5 +1,7 @@
 {
+	"name": "the-ladys-book-of-decency",
 	"version": "0.0.1",
+	"description": "A Practical Treatise on Manners, Feeding, and Etiquette",
 	"main": "./src/index.js",
 	"author": "SweetHeart Squad",
 	"scripts": {
