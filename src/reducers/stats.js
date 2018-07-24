@@ -24,6 +24,36 @@ export function decrementStat(stat = '') {
 	return changeStat({ stat, diff: -1 });
 }
 
+export function vim() {
+	return incrementStat('vim');
+}
+export function ill() {
+	return decrementStat('vim');
+}
+export function fed() {
+	return incrementStat('fed');
+}
+export function ire() {
+	return decrementStat('fed');
+}
+export function fur() {
+	return incrementStat('fur');
+}
+export function gal() {
+	return decrementStat('fur');
+}
+export function fop() {
+	return incrementStat('fop');
+}
+export function sop() {
+	return decrementStat('fop');
+}
+export function wit() {
+	return incrementStat('wit');
+}
+export function dim() {
+	return decrementStat('wit');
+}
 
 // reducer
 const initialState = {
