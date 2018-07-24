@@ -1,0 +1,21 @@
+.stats {
+	display: flex;
+	flex-direction: column;
+}
+
+.stats>li {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	width: 10em;
+	height: 2em;
+}
+
+.stats>li>label {
+	flex: none;
+	width: 3em;
+	text-align: center;
+}
+.stats>li>meter {
+	flex: auto;
+}

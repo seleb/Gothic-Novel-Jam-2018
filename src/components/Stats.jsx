@@ -1,5 +1,6 @@
 import { h, Component } from 'preact';
 import { connect } from 'preact-redux';
+import './Stats.css';
 
 export function Stat({
 	stat = '',
