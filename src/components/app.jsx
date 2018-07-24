@@ -12,8 +12,12 @@ export default function App({ }, { }) {
 				<h1><SmallCaps>The Lady's Book Of Decency</SmallCaps></h1>
 				<h2>A Practical Treatise on Manners, Feeding, and Etiquette</h2>
 			</header>
+			<main>
 				<Stats />
 				<Debug />
+			</main>
+			<footer>
+			</footer>
 		</div>
 	);
 }
