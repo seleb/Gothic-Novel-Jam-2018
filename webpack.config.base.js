@@ -15,6 +15,9 @@ module.exports = {
 				loader: 'babel-loader'
 			}
 		}, {
+			test: /\.strand$/,
+			use: 'raw-loader'
+		}, {
 			test: /\.css$/, // stylesheets
 			use: [
 				'style-loader',
