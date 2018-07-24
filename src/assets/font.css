@@ -1,0 +1,10 @@
+@font-face {
+	font-family: 'IM Fell English';
+	font-style: normal;
+	src: url(./font/IMFeENrm28P.woff);
+}
+@font-face {
+	font-family: 'IM Fell English';
+	font-style: italic;
+	src: url(./font/IMFeENit28P.woff);
+}
