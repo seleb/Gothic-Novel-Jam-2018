@@ -3,6 +3,7 @@ import { h, Component } from 'preact';
 import './app.css';
 import SmallCaps from './SmallCaps';
 import Stats from './Stats';
+import Strand from './strand/Strand';
 import Debug from './Debug';
 
 export default function App({ }, { }) {
@@ -13,6 +14,7 @@ export default function App({ }, { }) {
 				<h2>A Practical Treatise on Manners, Feeding, and Etiquette</h2>
 			</header>
 			<main>
+				<Strand />
 				<Stats />
 				<Debug />
 			</main>
