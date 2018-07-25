@@ -1,74 +1,51 @@
 import { h, Component } from 'preact';
 import { connect } from 'preact-redux';
 
-import { nodeDone } from '../../reducers/textAnimation';
+import { finishNode, incrementNode } from '../../reducers/textAnimation';
 import './TextNode.css';
 
 
-export class TextNode extends Component{
-	constructor(props){
+export class TextNode extends Component {
+	constructor(props) {
 		super(props);
-		this.state = {
-			shown: 0,
-		};
-	}
-	componentWillReceiveProps({
-		children: oldChildren = [],
-	}) {
-		const {
-			children: newChildren = [],
-		} = this.props;
-		if(oldChildren !== newChildren){
-			this.setState({
-				shown: 0,
-			});
-		}
 	}
 
-	incrementShown(){
-		this.setState(({
+	tick = () => {
+		const {
 			shown = 0,
-		}) => ({
-			shown: shown +1,
-		}));
-	}
-
-	tick = ()=>{
-		const {
-			state: {
-				shown = 0,
-			} = {},
-			props: {
-				idx = -1,
-				children: {
-					0: {
-						length = 0,
-					} = '',
-				} = [],
-				nodeDone: dispatchNodeDone,
-			} = {},
-		} = this;
-		if(shown < length) {
-			this.incrementShown();
-		} else {
-			dispatchNodeDone(idx);
+			idx = -1,
+			children: {
+				0: {
+					length = 0,
+				} = '',
+			} = [],
+			finishNode: dispatchFinishNode,
+			incrementNode: dispatchIncrementNode,
+		} = this.props;
+		dispatchIncrementNode(idx);
+		if (shown >= length - 1) {
+			dispatchFinishNode(idx);
 		}
 	}
 
 	render({
 		idx = -1,
-		show = false,
+		shown = -1,
 		children: {
 			0: content = '',
 		} = [],
-	}, {
-		shown = 0,
 	}) {
-		if(!show){
+		if (shown < 0) {
 			return null;
 		}
-
-		return <span className="text-node">{content.substr(0,shown)}<span onAnimationEnd={this.tick} className={` last last-${shown%2}`}>{content.substr(shown, 1)}</span></span>;
+		const shownChars = content.substr(0, shown);
+		const nextChar = content.substr(shown, 1);
+		return (
+			<span className="text-node">
+				{shownChars}
+				{nextChar && <span onAnimationEnd={this.tick} className={` last last-${shown % 2}`}>{nextChar}</span>}
+			</span>
+		);
 	}
 }
 
@@ -77,14 +54,14 @@ export function mapStateToProps({
 		nodes = {},
 	} = {},
 }, { idx = -1 }) {
-	let nodeIdx = idx - 1;
 	return {
-		show: nodeIdx < 0 || nodes[nodeIdx],
+		shown: nodes[idx],
 	};
 }
 
 const mapDispatchToProps = {
-	nodeDone,
+	finishNode,
+	incrementNode,
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(TextNode);
