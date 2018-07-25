@@ -1,16 +1,23 @@
-.text-node {}
+.text-node>.last-word {
+	white-space: pre;
+}
 
-.text-node>.last {
+.text-node>.last-word>.last {
 	display: inline-block;
 	animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
 	animation-duration: .03s;
 	animation-iteration-count: 1;
 }
 
-.text-node>.last.last-0 {
+.text-node>.last-word>.break-guard{
+	visibility: hidden;
+}
+
+/* using two identical animations so we can re-trigger by toggling class */
+.text-node>.last-word>.last.last-0 {
 	animation-name: text0;
 }
-.text-node>.last.last-1 {
+.text-node>.last-word>.last.last-1 {
 	animation-name: text1;
 }
 
