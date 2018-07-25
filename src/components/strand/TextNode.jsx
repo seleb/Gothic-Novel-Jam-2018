@@ -26,6 +26,9 @@ export class TextNode extends Component {
 		if (shown >= length - 1) {
 			dispatchFinishNode(idx);
 		}
+		if (this.end) {
+			this.end.scrollIntoView({ behavior: "smooth" });
+		}
 	}
 
 	render({
@@ -67,7 +70,7 @@ export class TextNode extends Component {
 				{shownWords}
 				<span className="last-word">
 					{lastWord}
-					{animChar && <span onAnimationEnd={this.tick} className={` last last-${shown % 2}`}>{animChar}</span>}
+					{animChar && <span ref={el => { this.end = el; }} onAnimationEnd={this.tick} className={` last last-${shown % 2}`}>{animChar}</span>}
 					{hiddenChars && <span className="break-guard">{hiddenChars}</span>}
 				</span>
 			</span>
