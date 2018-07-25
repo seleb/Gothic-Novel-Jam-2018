@@ -1,0 +1,9 @@
+.action-node {
+	color: rgb(150,10,20);
+	font-weight: bold;
+	cursor: pointer;
+}
+.action-node:hover{
+	color: rgb(150,10,20);
+	text-shadow: #523b25 0.02em 0.02em 0.02em;
+}

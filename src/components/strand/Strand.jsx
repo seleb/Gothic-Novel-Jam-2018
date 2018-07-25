@@ -7,7 +7,7 @@ import './Strand.css';
 export function Strand({ passage = [] }, { }) {
 	return (
 		<div className="strand">
-			{passage.map(entry => <Node {...entry} />)}
+			{passage.map((entry, idx) => <Node {...entry} idx={idx} />)}
 		</div>
 	);
 }
