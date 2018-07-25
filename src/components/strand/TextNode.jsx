@@ -49,6 +49,7 @@ export class TextNode extends Component {
 		const shownChars = content.substr(0, shown);
 		// animated character (next being shown)
 		const animChar = content.substr(shown, 1);
+		const isSpace = animChar.match(/\s/);
 		// split the shown characters into fully shown words,
 		// and last partial word
 		// if the animated character is a space,
@@ -56,12 +57,11 @@ export class TextNode extends Component {
 		const {
 			1: shownWords,
 			2: lastWord,
-		} = animChar
-			.match(/\s/)
+		} = isSpace
 				? [undefined, shownChars, undefined]
-				: shownChars.split(/(.*\s)?(.*)/);
+				: shownChars.match(/^([^]*?)(\b\w*)?$/);
 		// remainder of partial word (if there is one)
-		const hiddenChars = content.substr(shown + 1).split(' ')[0];
+		const hiddenChars = isSpace ? '' : content.substr(shown + 1).split(' ')[0];
 		return (
 			<span className="text-node">
 				{shownWords}
