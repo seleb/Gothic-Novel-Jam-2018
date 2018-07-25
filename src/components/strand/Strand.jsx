@@ -2,10 +2,11 @@ import { h, Component } from 'preact';
 import { connect } from 'preact-redux';
 
 import Node from './Node';
+import './Strand.css';
 
 export function Strand({ passage = [] }, { }) {
 	return (
-		<div>
+		<div className="strand">
 			{passage.map(entry => <Node {...entry} />)}
 		</div>
 	);

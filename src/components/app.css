@@ -18,6 +18,12 @@
 	background: linear-gradient(217deg, rgba(181, 162, 144, .3), rgba(195, 163, 132, .3) 70.71%), linear-gradient(127deg, rgba(99, 59, 21, 0.3), rgba(165, 147, 105, .3) 70.71%), linear-gradient(336deg, #523b25, #8c7c75 70.71%);
 	color: black;
 }
+.app>main{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
 
 /* paper overlay */
 

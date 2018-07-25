@@ -1,0 +1,16 @@
+
+.strand {
+	display:block;
+	width: 80%;
+	height: 50%;
+	border-color: #000;
+	border-width: 5em;
+	border-style: solid;
+	border-image-source: url('./../../assets/border-test.png');
+	border-image-slice: 33.333%;
+	border-image-width: 5em;
+	border-image-outset: 0;
+	border-image-repeat: round;
+	overflow-x: visible;
+	overflow-y: auto;
+}
