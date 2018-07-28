@@ -27,7 +27,7 @@ export class TextNode extends Component {
 			dispatchFinishNode(idx);
 		}
 		if (this.end) {
-			this.end.scrollIntoView({ behavior: "smooth" });
+			this.end.scrollIntoView({ behavior: "instant" });
 		}
 	}
 

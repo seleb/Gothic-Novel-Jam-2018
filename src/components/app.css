@@ -39,17 +39,6 @@
 	pointer-events: none;
 }
 
-.app>header {
-	flex: none;
-	font-size: .8em;
-	padding: 1em 3em;
-	width: 100%;
-	display: flex;
-	justify-content: space-between;
-	opacity: 0.8;
-	font-style: italic;
-}
-
 .app>main {
 	flex: auto;
 	width: 100%;
@@ -59,8 +48,13 @@
 
 .app>footer {
 	flex: none;
-	padding: 1em;
+	font-size: .8em;
+	padding: 1em 3em;
 	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	opacity: 0.8;
+	font-style: italic;
 	background: black;
-	color: white;
+	color: #a59485;
 }
