@@ -11,7 +11,6 @@ export default function App({ }, { }) {
 		<div class="app">
 			<main>
 				<Strand />
-				<Stats />
 				<Debug />
 			</main>
 			<footer>

@@ -3,7 +3,7 @@ import { connect } from 'preact-redux';
 import './Stats.css';
 
 export class Stat extends Component {
-	constructor(props){
+	constructor(props) {
 		super(props);
 		this.state = {
 			wiggle: undefined,
@@ -31,10 +31,10 @@ export class Stat extends Component {
 			1: positiveLabel = '',
 		} = {},
 	}) {
-		const posWiggle = Math.sign(this.state.wiggle) > 0 ? `wiggle-${(value+3)%2}` : '';
-		const negWiggle = Math.sign(this.state.wiggle) < 0 ? `wiggle-${(value+3)%2}` : '';
+		const posWiggle = Math.sign(this.state.wiggle) > 0 ? `wiggle-${(value + 3) % 2}` : '';
+		const negWiggle = Math.sign(this.state.wiggle) < 0 ? `wiggle-${(value + 3) % 2}` : '';
 		return (
-			<li className="stat">
+			<li>
 				<label for={stat} className={negWiggle}>{negativeLabel}</label>
 				<div name={stat} id={stat} className="container">
 					<div className="bar" style={{ width: `${(value + 3) / 6 * 100}%` }} />
@@ -47,21 +47,26 @@ export class Stat extends Component {
 
 export function Stats({
 	stats = {},
+	show = false,
 }) {
 	return (
-		<ul className="stats">
-			{Object.entries(stats).map(([key, stat]) => (
-				<Stat key={key} stat={key} {...stat} />
-			))}
-		</ul>
+			<ul className={`stats ${show ? '' : 'hidden'}`} onClick={() => this.setState({ hidden: this.state.hidden ? '' : 'hidden' })}>
+				{Object.entries(stats).map(([key, stat]) => (
+					<Stat key={key} stat={key} {...stat} />
+				))}
+			</ul>
 	);
 }
 
 export function mapStateToStatsProps({
-	stats = {},
+	stats: {
+		show = false,
+		...rest,
+	} = {},
 }) {
 	return {
-		stats,
+		show,
+		stats: rest,
 	};
 }
 

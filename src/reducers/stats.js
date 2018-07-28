@@ -1,6 +1,7 @@
 // actions
 export const STATS_SET = 'stats:set';
 export const STATS_CHANGE = 'stats:change';
+export const STATS_SET_SHOW = 'stats:show';
 
 // action creators
 export function setStat({
@@ -55,6 +56,10 @@ export function dim() {
 	return decrementStat('wit');
 }
 
+export function setShowStats(show = false) {
+	return { type: STATS_SET_SHOW, show };
+}
+
 // reducer
 const initialState = {
 	vim: {
@@ -77,6 +82,7 @@ const initialState = {
 		value: 0,
 		labels: ['DIM','WIT'],
 	},
+	show: false,
 };
 
 export default function statsReducer(state = initialState, action) {
@@ -96,6 +102,11 @@ export default function statsReducer(state = initialState, action) {
 					...state[action.stat],
 					value: Math.min(3, Math.max(-3, state[action.stat].value + action.diff)),
 				},
+			};
+		case STATS_SET_SHOW:
+			return {
+				...state,
+				show: action.show,
 			};
 		default:
 			return state;

@@ -1,5 +1,32 @@
+.toggle {
+	position: absolute;
+	right: 0;
+	top: 0;
+	border-radius: 50%;
+	width: 3em;
+	height: 3em;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background: none;
+	background-color: black;
+	color: #a59485;
+	border: none;
+	cursor: pointer;
+}
+.toggle:focus {
+	outline: none;
+}
+.toggle.opened {
+	background-color: transparent;
+}
+.toggle:hover {
+	background: rgb(150,10,20);
+}
 .strand {
-	display: block;
+	display: grid;
+	grid-template-columns: 1fr auto;
+	grid-auto-rows: 100%;
 	width: 90%;
 	height: 90%;
 	max-width: 50em;
@@ -12,22 +39,37 @@
 	border-image-width: 5em;
 	border-image-outset: 0;
 	border-image-repeat: round;
-	overflow-x: hidden;
-	overflow-y: scroll;
-	white-space: pre-wrap;
 }
 
-.strand::-webkit-scrollbar {
+.strand>.stats-area {
+	position: relative;
+	height: 100%;
+	min-width: 2em;
+	overflow-x: hidden;
+	overflow-y: auto;
+}
+
+.strand>.passages-area {
+	height: 100%;
+	white-space: pre-wrap;
+	overflow-x: hidden;
+	overflow-y: auto;
+}
+
+.strand>.passages-area::-webkit-scrollbar,
+.strand>.stats-area::-webkit-scrollbar {
 	width: .2em;
 	background: none;
 	margin-left: .1em;
 }
 
-.strand::-webkit-scrollbar-thumb {
+.strand>.passages-area::-webkit-scrollbar-thumb,
+.strand>.stats-area::-webkit-scrollbar-thumb {
 	background: rgba(0, 0, 0, .5);
 	border-radius: .1em;
 }
 
-.strand::-webkit-scrollbar-track {
+.strand>.passages-area::-webkit-scrollbar-track,
+.strand>.stats-area::-webkit-scrollbar-track {
 	background: none;
 }

@@ -1,6 +1,28 @@
 .stats {
 	display: flex;
 	flex-direction: column;
+	padding: 1em;
+	background: black;
+	color: #a59485;
+	border-radius: 1em;
+	align-items: center;
+	justify-content: space-between;
+	height: 8em;
+	width: 12em;
+	opacity: 1;
+	overflow: hidden;
+	transition:
+		opacity .25s ease-in-out,
+		width .5s ease-in-out,
+		height .5s ease-in-out,
+		padding .5s ease-in-out;
+}
+
+.stats.hidden {
+	height: 0;
+	width: 0;
+	opacity: 0;
+	padding: 0;
 }
 
 .stats>li {
@@ -8,7 +30,6 @@
 	flex-direction: row;
 	align-items: center;
 	width: 10em;
-	height: 1.2em;
 }
 
 .stats>li>label {
@@ -21,7 +42,7 @@
 }
 .stats>li>.container {
 	flex: auto;
-	border: solid 1px black;
+	background: #a59485;
 	height: 1em;
 }
 .stats>li>.container>.bar {
