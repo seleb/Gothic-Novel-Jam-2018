@@ -86,7 +86,7 @@ export default function statsReducer(state = initialState, action) {
 				...state,
 				[action.stat]: {
 					...state[action.stat],
-					value: action.value,
+					value: Math.min(3, Math.max(-3, action.value)),
 				},
 			};
 		case STATS_CHANGE:
@@ -94,7 +94,7 @@ export default function statsReducer(state = initialState, action) {
 				...state,
 				[action.stat]: {
 					...state[action.stat],
-					value: state[action.stat].value + action.diff,
+					value: Math.min(3, Math.max(-3, state[action.stat].value + action.diff)),
 				},
 			};
 		default:

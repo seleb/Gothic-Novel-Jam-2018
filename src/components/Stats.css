@@ -8,14 +8,67 @@
 	flex-direction: row;
 	align-items: center;
 	width: 10em;
-	height: 2em;
+	height: 1.2em;
 }
 
 .stats>li>label {
 	flex: none;
 	width: 3em;
 	text-align: center;
+	animation-duration: .5s;
+	animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+	animation-name: none;
 }
-.stats>li>meter {
+.stats>li>.container {
 	flex: auto;
+	border: solid 1px black;
+	height: 1em;
+}
+.stats>li>.container>.bar {
+	height:100%;
+	background: rgb(150,10,20);
+	transition: width .5s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+/* using two identical animations so we can re-trigger by toggling class */
+.stats>li>label.wiggle-0 {
+	animation-name: wiggle0;
+}
+.stats>li>label.wiggle-1 {
+	animation-name: wiggle1;
+}
+
+@keyframes wiggle0 {
+	0% {
+		transform: rotate(00deg) scale(1.0);
+	}
+	10% {
+		transform: rotate(-10deg) scale(1.5);
+	}
+	40% {
+		transform: rotate(10deg) scale(1.1);
+	}
+	80% {
+		transform: rotate(-5deg) scale(1.1);
+	}
+	100% {
+		transform: rotate(0deg) scale(1.0);
+	}
+}
+@keyframes wiggle1 {
+	0% {
+		transform: rotate(00deg) scale(1.0);
+	}
+	10% {
+		transform: rotate(-10deg) scale(1.5);
+	}
+	40% {
+		transform: rotate(10deg) scale(1.1);
+	}
+	80% {
+		transform: rotate(-5deg) scale(1.1);
+	}
+	100% {
+		transform: rotate(0deg) scale(1.0);
+	}
 }
