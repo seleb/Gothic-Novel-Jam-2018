@@ -83,6 +83,16 @@ class StrandE extends Strand {
 // TODO: extend Strand and make it run more of its internals through redux
 const strand = new StrandE({
 	renderer,
-	source,
+	source: source
+	.replace(/\[\+VIM\]/g, '[+VIM]<<do this.plus.vim()>>')
+	.replace(/\[\+ILL\]/g, '[+ILL]<<do this.plus.ill()>>')
+	.replace(/\[\+FED\]/g, '[+FED]<<do this.plus.fed()>>')
+	.replace(/\[\+IRE\]/g, '[+IRE]<<do this.plus.ire()>>')
+	.replace(/\[\+FUR\]/g, '[+FUR]<<do this.plus.fur()>>')
+	.replace(/\[\+GAL\]/g, '[+GAL]<<do this.plus.gal()>>')
+	.replace(/\[\+FOP\]/g, '[+FOP]<<do this.plus.fop()>>')
+	.replace(/\[\+SOP\]/g, '[+SOP]<<do this.plus.sop()>>')
+	.replace(/\[\+WIT\]/g, '[+WIT]<<do this.plus.wit()>>')
+	.replace(/\[\+DIM\]/g, '[+DIM]<<do this.plus.dim()>>'),
 });
 strand.goto('start');
