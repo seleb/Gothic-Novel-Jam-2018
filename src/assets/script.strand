@@ -1,13 +1,211 @@
-::start
-some text with a [[shorthand link]] and a longform [[action|this.goto("other passage")]]
+// ::start
 
-::shorthand link
-<<set linkClicked=true>>this passage appears when you click the link
-[[back|this.back()]]
 
-::other passage
-<<if this.linkClicked>>
-this text shows up if you visited the shorthand link passage before getting here
+
+
+
+
+
+::
+You decide to visit the library, and see if there is aught to learn of your condition in the written histories.
+
+[[Research]]
+
+::Research
+It's difficult to find many books which treat the topic as more than simple fodder for a trite tale of heroes and monsters. Harder still to find anything that seems remotely reliable.
+
+You read of werewolves caused by [[curious taint]], by [[happenstance of birth]], by [[articles of clothing]]...
+
+::curious taint
+There are numerous works of fiction on the topic; almost all seem to presume lycanthropy to be a contagion, spreading from the bite of another such infected.
+
+Given that you've never encountered another such as yourself, it feels safe to [[rule that out]] as the cause. However, there may be aught to learn from [[similar stories]].
+
+::rule that out
+Having exhausted the most common explanation, you consider some of the more outlandish methods of contraction.
+
+Some describe the ingestion of magical concoctions, or recital of rituals, both pagan and Satanic. One tale tells that to sate your thirst on rainwater, pooled within the footprint of a wild wolf is to contract the curse. This is not something that you have ever done, nor have ever thought of doing.
+
+The tales only get taller as you read on. [+DIM]
+
+[[* * *|this.goto('')]]
+
+::similar stories
+It's certainly not the source of your own trouble, but you do wonder if there is truth to the stories nonetheless. The common superstition of the full moon causing transformation was fact; why not this as well?
+
+You make a mental note of the idea; it may not yet be relevant, but should the situation arise it would be most valuable to know if and how to spread your affliction. [+WIT] [+FUR]
+
+[[* * *|this.goto('')]]
+
+::happenstance of birth
+Legends and superstitions of this sort vary wildly in both specificity and believability. There is talk of werewolves being the curse of seventh-sons (you are neither seventh nor son), the curse of seventh-sons spawned of seventh-sons (your father was an only child), the curse of such-and-such date or this-and-that month (none of which match your own date of birth)...
+
+Among these is the supposition that a child borne of werewolf father and mother alike may inherit the curse. Unlikely though it may seem, it is actually one of the least implausible explanations you have come across as of yet. Perhaps you could [[ask your parents]] about this?
+
+But then again, perhaps it would be better to [[avoid discussing your situation]] with those best-equipped to discover it.
+
+::ask your parents
+TODO: this
+
+::avoid discussing your situation
+It's a theory worth considering, but best not be too hasty. Should the theory prove false, acting upon it now could easily lead to an ill-fated inquest of your own affairs.
+
+You'll keep quiet about this for the time being. [+WIT]
+
+[[* * *|this.goto('')]]
+
+::articles of clothing
+There are a few tales of specific garments, usually hewn of wolfskin, which prompt the transformation of their wearers. The most notable account tells of a man some centuries past in possession of one such belt, who used it commit numerous atrocities in the name of the Devil.
+
+It also tells of how this man was gruesomely tortured and executed on account of his lycanthropy and related crimes.
+
+You could [[look into this case]], or you could [[dismiss it]] as a waste of your time.
+
+::look into this case
+The author questions the veracity of the tale. The descriptions of the accused's crimes and torture are comparably violent, and the word of a man subjected to such pains is worth little. In the end, they infer the arduous trial as conspired to further the goals of the Church.
+
+They suppose the belt to be, at best, the delusion of a violent madman, and weigh this against the unfortunately probable possibility that it was nothing more than the desperate plea of an innocent man under duress.
+
+It's an interesting — though repulsive — read, but not particularly enlightening as to your own situation. [+DIM]
+
+[[Return your books.]]
+
+::Return your books.
+You bring the records you've been inspecting back to the librarian. They glance at the tomes as you return them, and you see recognition in their eyes.
+
+"Oh I've read this one myself! Quite a dark record; such gruesome things they did, did they not?"
+
+"[[They certainly did.]]"
+
+::They certainly did.
+<<if this.stat.dim > 0>>
+You elaborate, "It's horrible what they did to that poor man."
+
+Confusion flashes across the librarian's face for a moment.
+
+"I'm talking about what that foul beast did to all those poor women and children! Such a horrible creature has no place in this world."
+
+You think better of attempting to defend the accused werewolf. Sheepishly agreeing with their interpretation, you make a hasty retreat. [+DIM] [+IRE]
 <<else>>
-this text shows up if you didn't
+You elaborate, "The crimes described are horrible, and the court's response wasn't much better."
+
+You ask for their interpretation, and find that they perhaps had not read as closely as you, as the possibility of the accused's innocence doesn't cross their mind. You share a brief exchange on the unverifiable nuances of the case, and leave feeling as if you've given them a lot to think about. [+WIT]
 <<endif>>
+[[* * *|this.goto('')]]
+
+::dismiss it
+It's highly unlikely that your clothes have anything to do with it. You do not wear furs often, and of those you own, none are wolf fur. Even if they were, you think you'd remember if they had been bestowed upon you by the Devil Himself. [+WIT]
+
+[[* * *|this.goto('')]]
+
+::start
+[[eat breakfast]]
+[[summer heat]]
+
+::eat breakfast
+The ill thoughts trouble your dreams, and your sleep that night is not a restful one. You do not wake naturally the following day, instead stirred by the steward drawing blinds.
+
+He mentions that he will be sending one of the girls to grocery at the local market, and that they will be preparing breakfast as soon as they return.
+
+"Is there anything in particular the young lady desires this morn?"
+
+You consider asking for [[something bloody]], though you should probably go with [[something light]] to avoid suspicion.
+
+::something bloody
+You're absolutely famished. You ask him to pick out the finest cut of beef on offer.
+
+[[He hesitates.]]
+
+::He hesitates.
+"-for breakfast, madam?"
+
+[[You insist.]]
+
+::You insist.
+You go on, "And perhaps a side of sausage and eggs, or bacon rather, should they have it."
+
+You can sense him trying to hide surprise as he answers.
+
+"[[...as you wish, madam.]]"
+
+::...as you wish, madam.
+Your stomach growls as the meal is served. You can feel the saliva pooling in your mouth, and swallow actively to avoid drooling the excess before digging in.
+
+[[You eat well that morning.]] [+FED]
+
+::You eat well that morning.
+The steward does not comment further on the peculiarity of your carnivorous request — at least not to your face. [+SOP]
+
+[[* * *|this.goto('')]]
+
+
+::something light
+You make your wish known, and make your toilet for the day.
+
+Shortly after you've finished, you enter the dining room, wherein the servants have begun to serve a [[light breakfast]].
+
+::light breakfast
+Buttered toast and jam, baskets of fruit from the local market.
+
+You take a bite of an apple; chew it.
+There's an innocuous sweetness to it; acidic — but softly so.
+It's a familiar taste. A [[pleasant]] one.
+
+::pleasant
+You can't help but wish it were anything else. [+IRE]
+
+[[* * *|this.goto('')]]
+
+
+::summer heat
+The summer brings with it a dreadful heat — at first a wave, then a persistent, sweltering thing that sits too close and breathes down your neck.
+
+One particularly sunny afternoon, you stop momentarily to cool off under the cover of a lonely willow. The shade does little to help. Without thinking, your tongue lolls out of your mouth.
+
+It takes a moment for the reality of the reflex to hit you: [[Ladies do not pant!]] But then again, [[no one is watching]]...
+
+::Ladies do not pant!
+Catching yourself, you quickly withdraw the errant muscle. You pull a handkerchief from your purse and dab a stray bit of saliva from your lips.
+
+Spurred on by this embarrassing lapse of poise, you return to your stroll and commit to enduring the heat — like a proper lady. [+ILL] [+FOP] [+GAL]
+
+<<if this.stat.ill > 0>>
+[[* * *|this.goto('heatstroke')]]
+<<else>>
+[[* * *|this.goto('next')]]
+<<endif>>
+
+
+::heatstroke
+Unfortunately, you collapse from exhaustion a few minutes later.
+
+It takes a couple hours for anyone to happen upon you: a couple hours alone and unconscious in the [[blistering sun]]. [+ILL]
+
+::blistering sun
+Your story serves as a tragic reminder of the dangers of heatstroke in summer months.
+
+[[The End|this.goto('start')]]
+
+::no one is watching
+Glancing around to ensure you're alone, you plop down at the base of the tree and allow yourself to relax. [+FUR]
+
+<<if this.stat.fur > 0>>
+[[*sigh*|this.goto('doggy doze')]]
+<<else>>
+[[*sigh*|this.goto('refresh')]]
+<<endif>>
+
+::doggy doze
+You get a little too into it and [[doze off]].
+
+::doze off
+You're awoken about an hour later by an alarmed groundskeeper making their rounds.
+
+You assure him there's no cause for distress, blaming your situation on a mild case of the vapours, but it's unlikely this encounter will go unspoken. [+SOP]
+
+[[* * *|this.goto('')]]
+
+::refresh
+After a quick break, you're back to your stroll, refreshed and ready to go. [+VIM]
+
+[[* * *|this.goto('')]]
