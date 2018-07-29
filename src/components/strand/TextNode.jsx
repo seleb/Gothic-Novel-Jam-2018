@@ -26,8 +26,8 @@ export class TextNode extends Component {
 		if (shown >= length - 1) {
 			dispatchFinishNode(idx);
 		}
-		if (this.end) {
-			this.end.scrollIntoView({ behavior: "instant" });
+		if (this.node) {
+			this.node.parentNode.scrollTop = this.node.parentNode.scrollHeight;
 		}
 	}
 
@@ -44,7 +44,7 @@ export class TextNode extends Component {
 		const { length = 0 } = content;
 		if (shown >= length) {
 			// animation complete
-			return <span className="text-node">{content}</span>;
+			return <span className="text-node" ref={el => { this.node = el; }}>{content}</span>;
 		}
 
 		// mid animation, split into various subsections
@@ -66,11 +66,11 @@ export class TextNode extends Component {
 		// remainder of partial word (if there is one)
 		const hiddenChars = isSpace ? '' : content.substr(shown + 1).split(' ')[0];
 		return (
-			<span className="text-node">
+			<span className="text-node" ref={el => { this.node = el; }} >
 				{shownWords}
 				<span className="last-word">
 					{lastWord}
-					{animChar && <span ref={el => { this.end = el; }} onAnimationEnd={this.tick} className={` last last-${shown % 2}`}>{animChar}</span>}
+					{animChar && <span onAnimationEnd={this.tick} className={` last last-${shown % 2}`}>{animChar}</span>}
 					{hiddenChars && <span className="break-guard">{hiddenChars}</span>}
 				</span>
 			</span>

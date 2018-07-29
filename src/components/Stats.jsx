@@ -30,37 +30,62 @@ export class Stat extends Component {
 			0: negativeLabel = '',
 			1: positiveLabel = '',
 		} = {},
+		titles = [],
+		setStat,
+	}, {
+		wiggle,
 	}) {
 		const valOffset = value + 3;
-		const posWiggle = Math.sign(this.state.wiggle) > 0 ? `wiggle-${valOffset % 2}` : '';
-		const negWiggle = Math.sign(this.state.wiggle) < 0 ? `wiggle-${valOffset % 2}` : '';
+		const title = titles[valOffset];
+		const posWiggle = Math.sign(wiggle) > 0 ? `wiggle-${valOffset % 2}` : '';
+		const negWiggle = Math.sign(wiggle) < 0 ? `wiggle-${valOffset % 2}` : '';
 		return (
-			<li>
+			<li onMouseOver={() => setStat(stat)}>
 				<label for={stat} className={negWiggle} style={{
-					opacity: .5-value/8,
+					opacity: .5 - value / 8,
 				}}>{negativeLabel}</label>
 				<div name={stat} id={stat} className="container">
 					<div className="bar" style={{ width: `${valOffset / 6 * 100}%` }} />
 				</div>
 				<label for={stat} className={posWiggle} style={{
-					opacity: .5+value/8,
+					opacity: .5 + value / 8,
 				}}>{positiveLabel}</label>
 			</li>
 		);
 	}
 }
 
-export function Stats({
-	stats = {},
-	show = false,
-}) {
-	return (
+export class Stats extends Component {
+	constructor() {
+		super();
+		this.state = {
+			stat: '',
+		};
+	}
+	render({
+		stats = {},
+		show = false,
+	}, {
+		stat = '',
+	}) {
+		const {
+			[stat]: {
+				titles = [],
+				value = 0,
+			} = {}
+		} = stats;
+		const {
+			[value + 3]: explanation = '...',
+		} = titles;
+		return (
 			<ul className={`stats ${show ? '' : 'hidden'}`} onClick={() => this.setState({ hidden: this.state.hidden ? '' : 'hidden' })}>
 				{Object.entries(stats).map(([key, stat]) => (
-					<Stat key={key} stat={key} {...stat} />
+					<Stat key={key} stat={key} {...stat} setStat={stat => this.setState({ stat })} />
 				))}
+				<li className="explanation">{explanation}</li>
 			</ul>
-	);
+		);
+	}
 }
 
 export function mapStateToStatsProps({

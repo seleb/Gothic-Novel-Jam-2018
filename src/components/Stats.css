@@ -7,7 +7,7 @@
 	border-radius: .75em;
 	align-items: center;
 	justify-content: space-between;
-	height: 8em;
+	height: 9em;
 	width: 12em;
 	opacity: 1;
 	overflow: hidden;
@@ -29,7 +29,15 @@
 	display: flex;
 	flex-direction: row;
 	align-items: center;
+	justify-content: center;
 	width: 10em;
+}
+
+.stats>li.explanation {
+	padding-top: .5em;
+	width: 100%;
+	font-size: 0.6em;
+	text-align: center;
 }
 
 .stats>li>label {
