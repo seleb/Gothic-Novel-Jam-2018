@@ -1,6 +1,7 @@
 // actions
 export const STRAND_PASSAGE_DISPLAY = 'strand:passage:display';
 export const STRAND_ACTION_EVAL = 'strand:action:eval';
+export const STRAND_SET_FLAG = 'strand:flag:set';
 
 // action creators
 export function displayPassage(passage) {
@@ -9,10 +10,14 @@ export function displayPassage(passage) {
 export function evalAction(action) {
 	return { type: STRAND_ACTION_EVAL, action };
 }
+export function setFlag(flag, value) {
+	return { type: STRAND_SET_FLAG, flag, value };
+}
 
 // reducer
 const initialState = {
-	passage: []
+	passage: [],
+	flags: {},
 };
 
 export default function(state = initialState, action) {
@@ -21,6 +26,14 @@ export default function(state = initialState, action) {
 			return {
 				...state,
 				passage: action.passage,
+			};
+		case STRAND_SET_FLAG:
+			return {
+				...state,
+				flags: {
+					...state.flags,
+					[action.flag]: action.value,
+				},
 			};
 		default:
 			return state;

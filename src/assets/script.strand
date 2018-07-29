@@ -14,12 +14,13 @@ You decide to visit the library, and see if there is aught to learn of your cond
 ::Research
 It's difficult to find many books which treat the topic as more than simple fodder for a trite tale of heroes and monsters. Harder still to find anything that seems remotely reliable.
 
-You read of werewolves caused by [[curious taint]], by [[happenstance of birth]], by [[articles of clothing]]...
+You read of werewolves caused by <<if this.flag('curious taint')>>curious taint<<else>>[[curious taint]]<<endif>>, by <<if this.flag('happenstance of birth')>>happenstance of birth<<else>>[[happenstance of birth]]<<endif>>, by <<if this.flag('articles of clothing')>>articles of clothing<<else>>[[articles of clothing]]<<endif>>...
 
 ::curious taint
 There are numerous works of fiction on the topic; almost all seem to presume lycanthropy to be a contagion, spreading from the bite of another such infected.
 
 Given that you've never encountered another such as yourself, it feels safe to [[rule that out]] as the cause. However, there may be aught to learn from [[similar stories]].
+<<do this.flag('curious taint', true)>>
 
 ::rule that out
 Having exhausted the most common explanation, you consider some of the more outlandish methods of contraction.
@@ -43,6 +44,7 @@ Legends and superstitions of this sort vary wildly in both specificity and belie
 Among these is the supposition that a child borne of werewolf father and mother alike may inherit the curse. Unlikely though it may seem, it is actually one of the least implausible explanations you have come across as of yet. Perhaps you could [[ask your parents]] about this?
 
 But then again, perhaps it would be better to [[avoid discussing your situation]] with those best-equipped to discover it.
+<<do this.flag('happenstance of birth', true)>>
 
 ::ask your parents
 TODO: this
@@ -60,6 +62,7 @@ There are a few tales of specific garments, usually hewn of wolfskin, which prom
 It also tells of how this man was gruesomely tortured and executed on account of his lycanthropy and related crimes.
 
 You could [[look into this case]], or you could [[dismiss it]] as a waste of your time.
+<<do this.flag('articles of clothing', true)>>
 
 ::look into this case
 The author questions the veracity of the tale. The descriptions of the accused's crimes and torture are comparably violent, and the word of a man subjected to such pains is worth little. In the end, they infer the arduous trial as conspired to further the goals of the Church.

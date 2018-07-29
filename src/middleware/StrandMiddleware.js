@@ -3,6 +3,7 @@ import Strand from 'strand-core';
 import {
 	STRAND_INIT,
 	displayPassage,
+	setFlag,
 	STRAND_ACTION_EVAL
 } from '../reducers/strand';
 import {
@@ -78,6 +79,14 @@ class StrandE extends Strand {
 
 	get plus(){
 		return plus;
+	}
+
+	flag(flag, value) {
+		if (value !== undefined) {
+			dispatch(setFlag(flag, value));
+		} else {
+			return getState().strand.flags[flag];
+		}
 	}
 }
 // TODO: extend Strand and make it run more of its internals through redux
