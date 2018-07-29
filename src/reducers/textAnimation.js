@@ -3,6 +3,7 @@ import { STRAND_PASSAGE_DISPLAY } from "./strand";
 // actions
 export const NODE_DONE = 'textanimation:node:done';
 export const NODE_INCREMENT = 'textanimation:node:increment';
+export const FINISH = 'textanimation:finish';
 
 // action creators
 export function finishNode(idx) {
@@ -10,6 +11,9 @@ export function finishNode(idx) {
 }
 export function incrementNode(idx) {
 	return { type: NODE_INCREMENT, idx };
+}
+export function finish(length) {
+	return { type: FINISH, length };
 }
 
 // reducer
@@ -42,6 +46,12 @@ export default function statsReducer(state = initialState, action) {
 					[action.idx]: state.nodes[action.idx] + 1,
 				},
 			};
+		case FINISH: {
+			return {
+				...state,
+				nodes: new Array(action.length).fill(Infinity),
+			};
+		}
 		default:
 			return state;
 	}
