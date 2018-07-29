@@ -20,7 +20,7 @@ export function Strand({
 			</section>
 			<section className="stats-area">
 				<Stats />
-				<button className={`toggle ${show ? 'opened' :''}`} onClick={() => setShowStats(!show)} >{show ? '>' : '<'}</button>
+				<button className={`toggle ${show ? 'opened' : ''}`} onClick={event => { event.preventDefault(); event.stopPropagation(); setShowStats(!show) }} >{show ? '>' : '<'}</button>
 			</section>
 		</div>
 	);

@@ -7,7 +7,9 @@ import TextNode from './TextNode';
 import './ActionNode.css';
 
 export class Action {
-	evalAction = () => {
+	evalAction = event => {
+		event.preventDefault();
+		event.stopPropagation();
 		const {
 			action = '',
 			evalAction,
