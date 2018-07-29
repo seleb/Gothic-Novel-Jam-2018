@@ -31,15 +31,20 @@ export class Stat extends Component {
 			1: positiveLabel = '',
 		} = {},
 	}) {
-		const posWiggle = Math.sign(this.state.wiggle) > 0 ? `wiggle-${(value + 3) % 2}` : '';
-		const negWiggle = Math.sign(this.state.wiggle) < 0 ? `wiggle-${(value + 3) % 2}` : '';
+		const valOffset = value + 3;
+		const posWiggle = Math.sign(this.state.wiggle) > 0 ? `wiggle-${valOffset % 2}` : '';
+		const negWiggle = Math.sign(this.state.wiggle) < 0 ? `wiggle-${valOffset % 2}` : '';
 		return (
 			<li>
-				<label for={stat} className={negWiggle}>{negativeLabel}</label>
+				<label for={stat} className={negWiggle} style={{
+					opacity: .5-value/8,
+				}}>{negativeLabel}</label>
 				<div name={stat} id={stat} className="container">
-					<div className="bar" style={{ width: `${(value + 3) / 6 * 100}%` }} />
+					<div className="bar" style={{ width: `${valOffset / 6 * 100}%` }} />
 				</div>
-				<label for={stat} className={posWiggle}>{positiveLabel}</label>
+				<label for={stat} className={posWiggle} style={{
+					opacity: .5+value/8,
+				}}>{positiveLabel}</label>
 			</li>
 		);
 	}
