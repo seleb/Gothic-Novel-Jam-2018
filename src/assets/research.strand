@@ -3,11 +3,16 @@ You decide to visit the library, and see if there is aught to learn of your cond
 
 ::written word
 It's difficult to find many books which treat the topic as more than simple fodder for a trite tale of heroes and monsters. Harder still to find anything that seems remotely reliable.
+<<if this.flag('curious taint') && this.flag('happenstance of birth') && this.flag('articles of clothing')>>
+You flip through pages absent-mindedly... You've all but exhausted the resources at your disposal here. Boredome taking charge, you glance about the library.
 
+Your many hours spent here have made it a familiar sight; you've even begun to recognize some of the other patrons. Come to think of it, [[that woman]] seated in the corner has been here each day that you have, and is one of the only souls you've seen perusing the same sections as you.
+<<else>>
 You read of werewolves caused by <<if this.flag('curious taint')>>curious taint<<else>>[[curious taint]]<<endif>>, by <<if this.flag('happenstance of birth')>>happenstance of birth<<else>>[[happenstance of birth]]<<endif>>, by <<if this.flag('articles of clothing')>>articles of clothing<<else>>[[articles of clothing]]<<endif>>...
+<<endif>>
 
 ::curious taint
-There are numerous works of fiction on the topic; almost all seem to presume lycanthropy to be a contagion, spreading from the bite of another such infected.
+There are numerous works of fiction on the topic; almost all seem to presume lycanthropy to be a contagion, spreading from the bite of another such infected. Some of these stories refer to female bearers of the curse as "wifewolves", but by and large they use the term "werewolf" to describe both men and women (though the tales are predominantly of men).
 
 Given that you've never encountered another such as yourself, it feels safe to [[rule that out]] as the cause. However, there may be aught to learn from [[similar stories]].
 <<do this.flag('curious taint', true)>>
@@ -86,5 +91,67 @@ You ask for their interpretation, and find that they perhaps had not read as clo
 
 ::dismiss it
 It's highly unlikely that your clothes have anything to do with it. You do not wear furs often, and of those you own, none are wolf fur. Even if they were, you think you'd remember if they had been bestowed upon you by the Devil Himself. [+WIT]
+
+[[* * *|this.goto('main')]]
+
+::that woman
+Already distracted from your studies, you decide take a closer look: She seems to be about your age, possibly a few years older. Dressed all in black, as if in mourning, she looks right at home amongst the dusty old tomes.
+
+You're not sure what she's reading, but it must be quite dense, as she hasn't turned a single page this whole time you've been— [[She is looking at you]].
+
+::She is looking at you
+<<if this.stat.fop > 1>>Your eyes meet for a brief moment, before she hastily looks away.
+<<else>>Your eyes meet for a brief moment, before you hastily look away. It's rude to stare. [+SOP]
+<<endif>>
+You go back to your books, but a few minutes later curiousity takes hold and you hazard another look. The situation has been reversed, and this time you catch her staring at you.
+
+Perhaps she has [[something to say]] to you? Though something is telling you it may be wiser to [[depart before this escalates]].
+
+::something to say
+There is something in her eyes — some ephemeral glint — which puts you on edge. She blinks, and the corners of her lips bend ever-so-slightly into a taut smile. A chill passes over you, and the hairs on the backs of your arms stand on edge.
+
+You return her smile. Not a moment later, she has closed her book and is walking towards you. Your heart pounds in your chest.
+
+"[[Hello]]."
+
+::Hello
+The two of you share a pleasant conversation about nothing in particular. <<if this.stat.dim > 0>>You stammer your way through most of it, though she doesn't seem to mind.
+<<else if this.stat.wit > 1>>You quickly pick up on her sense of humour, and get her laughing enough to warrant a "shush" from another patron.
+<<endif>>
+It's a nice break from your studies, and you find yourself [[almost forgetting]] your reason for being here, if only for a moment. [+GAL]
+
+::almost forgetting
+Almost, but not quite. You begin to wonder what this woman could possibly gain from browsing lore and legends for weeks on end, and perhaps more importantly, if she wonders the same of you. You debate posing the question to her, when she begins to excuse herself:
+
+"I must apologize for taking up your time, but you seemed so dreadfully bored! I am due for a previous arrangement, but if it's quite alright with you, we could continue this conversation at a later date?" She pauses briefly, before continuing, "I feel we may have much to discuss."
+
+You consider before responding. You might [[like that]]. You might [[think it unwise]].
+
+::like that
+You'd like that, and you say as much. [+GAL]
+
+"Marvelous! 'Till next week, then?"
+She bids you adieu and takes her leave.
+
+You feel somewhat guilty when you remember that this promise may very well be an empty one. Your freedom of action in the following week lies quite heavily on whatever shall occur during the upcoming full moon.
+
+The thought lingers, and spoils your mood the rest of the day.
+
+[[* * *|this.goto('main')]]
+
+::think it unwise
+Shared interests or no, you do not know this woman. You apologize, saying that your schedule is quite busy and simply cannot accommodate more social calls. Given that this woman has seen you here regularly, she almost certainly does not believe you, but does not press the matter and bids her adieu.
+
+It is unbecoming to so brazenly refuse such an invitation, but you feel you made the right decision nonetheless. [+SOP]
+
+[[* * *|this.goto('main')]]
+
+::depart before this escalates
+There is something in her eyes — some ephemeral glint — which puts you on edge. She blinks, and the corners of her lips bend ever-so-slightly into a taut smile. A chill passes over you, and the hairs on the backs of your arms stand on edge.
+
+Without so much as returning her smile, you gather your things and [[leave promptly]].
+
+::leave promptly
+Your heart pounds in your chest half the way home. You can't help but feel as if you've avoided some terrible danger, and pride yourself on having relied on your instincts. [+FUR]
 
 [[* * *|this.goto('main')]]
