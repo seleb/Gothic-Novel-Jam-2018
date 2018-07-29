@@ -2,6 +2,7 @@
 export const STATS_SET = 'stats:set';
 export const STATS_CHANGE = 'stats:change';
 export const STATS_SET_SHOW = 'stats:show';
+export const STATS_RESET = 'stats:reset';
 
 // action creators
 export function setStat({
@@ -16,6 +17,10 @@ export function changeStat({
 	diff = 0,
 }) {
 	return { type: STATS_CHANGE, stat, diff };
+}
+
+export function resetStats() {
+	return { type: STATS_RESET };
 }
 
 export function incrementStat(stat = '') {
@@ -64,7 +69,7 @@ export function setShowStats(show = false) {
 const initialState = {
 	vim: {
 		value: 0,
-		labels: ['ILL','VIM'],
+		labels: ['ILL', 'VIM'],
 		titles: [
 			'One foot in the grave.',
 			'Knocking on Death\'s door.',
@@ -77,7 +82,7 @@ const initialState = {
 	},
 	fed: {
 		value: 0,
-		labels: ['IRE','FED'],
+		labels: ['IRE', 'FED'],
 		titles: [
 			'Patience tested, and found wanting.',
 			'Frustrated.',
@@ -90,7 +95,7 @@ const initialState = {
 	},
 	fur: {
 		value: 0,
-		labels: ['GAL','FUR'],
+		labels: ['GAL', 'FUR'],
 		titles: [
 			'Curse? What curse?',
 			'Staying true to your past.',
@@ -103,7 +108,7 @@ const initialState = {
 	},
 	fop: {
 		value: 0,
-		labels: ['SOP','FOP'],
+		labels: ['SOP', 'FOP'],
 		titles: [
 			'Heads turn, faces filled with disgust.',
 			'A black mark on your family.',
@@ -116,7 +121,7 @@ const initialState = {
 	},
 	wit: {
 		value: 0,
-		labels: ['DIM','WIT'],
+		labels: ['DIM', 'WIT'],
 		titles: [
 			'A stuttering dullard.',
 			'Uncertain at best.',
@@ -152,6 +157,10 @@ export default function statsReducer(state = initialState, action) {
 			return {
 				...state,
 				show: action.show,
+			};
+		case STATS_RESET:
+			return {
+				...initialState,
 			};
 		default:
 			return state;

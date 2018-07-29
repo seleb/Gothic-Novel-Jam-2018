@@ -4,7 +4,8 @@ import {
 	STRAND_INIT,
 	displayPassage,
 	setFlag,
-	STRAND_ACTION_EVAL
+	STRAND_ACTION_EVAL,
+	resetFlags
 } from '../reducers/strand';
 import {
 	vim,
@@ -17,6 +18,7 @@ import {
 	sop,
 	wit,
 	dim,
+	resetStats,
 } from '../reducers/stats';
 
 import source from '../assets/script';
@@ -87,6 +89,11 @@ class StrandE extends Strand {
 		} else {
 			return getState().strand.flags[flag];
 		}
+	}
+
+	reset() {
+		dispatch(resetStats());
+		dispatch(resetFlags());
 	}
 }
 // TODO: extend Strand and make it run more of its internals through redux
