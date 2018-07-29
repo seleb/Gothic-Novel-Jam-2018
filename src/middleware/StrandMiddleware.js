@@ -81,7 +81,7 @@ class StrandE extends Strand {
 	}
 }
 // TODO: extend Strand and make it run more of its internals through redux
-const strand = new StrandE({
+export const strand = new StrandE({
 	renderer,
 	source: source
 	.replace(/\[\+VIM\]/g, '[+VIM]<<do this.plus.vim()>>')

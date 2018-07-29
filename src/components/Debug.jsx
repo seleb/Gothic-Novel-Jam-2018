@@ -12,13 +12,17 @@ import {
 	dim,
 } from '../reducers/stats';
 import { connect } from 'preact-redux';
+import { strand } from '../middleware/StrandMiddleware';
+import { evalAction } from '../reducers/strand';
 
 export function Debug({
 	stats = {},
+	evalAction,
 }) {
 	return (
 		<section className="debug">
-			{Object.entries(stats).map(([label, action]) => <button onClick={action}>{label}</button>)}
+			{Object.entries(stats).map(([label, action]) => <button onClick={action}>{label}</button>)}<br />
+			goto: {Object.keys(strand.passages).map(passage => <button onClick={() => evalAction(`this.goto("${passage}")`)}>{passage}</button>)}
 		</section>
 	);
 }
@@ -37,6 +41,7 @@ const mapDispatchToProps = dispatch => {
 			wit: () => dispatch(wit()),
 			dim: () => dispatch(dim()),
 		},
+		evalAction: action => dispatch(evalAction(action)),
 	};
 };
 
