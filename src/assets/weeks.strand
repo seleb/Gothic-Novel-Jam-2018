@@ -1,0 +1,75 @@
+::week-0
+week 0
+
+[[eat breakfast]]
+
+[[free time]]
+
+::week-1
+week 1
+
+[[free time]]
+
+::week-2
+week 2
+
+[[free time]]
+
+::week-3
+week 3
+
+[[free time]]
+
+
+::eat breakfast
+The ill thoughts trouble your dreams, and your sleep that night is not a restful one. You do not wake naturally the following day, instead stirred by the steward drawing blinds.
+
+He mentions that he will be sending one of the girls to grocery at the local market, and that they will be preparing breakfast as soon as they return.
+
+"Is there anything in particular the young lady desires this morn?"
+
+You consider asking for [[something bloody]], though you should probably go with [[something light]] to avoid suspicion.
+
+::something bloody
+You're absolutely famished. You ask him to pick out the finest cut of beef on offer.
+
+[[He hesitates.]]
+
+::He hesitates.
+"-for breakfast, madam?"
+
+[[You insist.]]
+
+::You insist.
+You go on, "And perhaps a side of sausage and eggs, or bacon rather, should they have it."
+
+You can sense him trying to hide surprise as he answers.
+
+"[[...as you wish, madam.]]"
+
+::...as you wish, madam.
+Your stomach growls as the meal is served. You can feel the saliva pooling in your mouth, and swallow actively to avoid drooling the excess before digging in.
+
+[[You eat well that morning.]] [+FED]
+
+::You eat well that morning.
+The steward does not comment further on the peculiarity of your carnivorous request — at least not to your face. [+SOP]
+
+[[* * *]]
+
+::something light
+You make your wish known, and make your toilet for the day.
+
+Shortly after you've finished, you enter the dining room, wherein the servants have begun to serve a [[light breakfast]].
+
+::light breakfast
+Buttered toast and jam, baskets of fruit from the local market.
+
+You take a bite of an apple; chew it.
+There's an innocuous sweetness to it; acidic — but softly so.
+It's a familiar taste. A [[pleasant]] one.
+
+::pleasant
+You can't help but wish it were anything else. [+IRE]
+
+[[* * *]]

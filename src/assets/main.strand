@@ -1,0 +1,77 @@
+// ::start
+
+
+
+::main
+[[A week passes.|this.goto('week-'+this.flag('week'))]]
+<<do this.flag('week', this.flag('week') + 1)>>
+
+::* * *
+Sometime that week, you find a day to yourself.
+
+You could spend it [[researching your condition]], [[going for a stroll]], or [[attending to family affairs]].
+
+Consulting the calendar, you see that you have roughly <<print ['four weeks','three weeks','two weeks','one week'][this.flag('week')]>> left before the next full moon.
+
+
+::start
+<<do this.flag('week', 0)>>
+[[eat breakfast]]
+[[summer heat]]
+[[go|this.goto('week-0')]]
+
+
+
+
+::summer heat
+The summer brings with it a dreadful heat — at first a wave, then a persistent, sweltering thing that sits too close and breathes down your neck.
+
+One particularly sunny afternoon, you stop momentarily to cool off under the cover of a lonely willow. The shade does little to help. Without thinking, your tongue lolls out of your mouth.
+
+It takes a moment for the reality of the reflex to hit you: [[Ladies do not pant!]] But then again, [[no one is watching]]...
+
+::Ladies do not pant!
+Catching yourself, you quickly withdraw the errant muscle. You pull a handkerchief from your purse and dab a stray bit of saliva from your lips.
+
+Spurred on by this embarrassing lapse of poise, you return to your stroll and commit to enduring the heat — like a proper lady. [+ILL] [+FOP] [+GAL]
+
+<<if this.stat.ill > 0>>
+[[* * *|this.goto('heatstroke')]]
+<<else>>
+[[* * *|this.goto('next')]]
+<<endif>>
+
+
+::heatstroke
+Unfortunately, you collapse from exhaustion a few minutes later.
+
+It takes a couple hours for anyone to happen upon you: a couple hours alone and unconscious in the [[blistering sun]]. [+ILL]
+
+::blistering sun
+Your story serves as a tragic reminder of the dangers of heatstroke in summer months.
+
+[[The End|this.goto('start')]]
+
+::no one is watching
+Glancing around to ensure you're alone, you plop down at the base of the tree and allow yourself to relax. [+FUR]
+
+<<if this.stat.fur > 0>>
+[[*sigh*|this.goto('doggy doze')]]
+<<else>>
+[[*sigh*|this.goto('refresh')]]
+<<endif>>
+
+::doggy doze
+You get a little too into it and [[doze off]].
+
+::doze off
+You're awoken about an hour later by an alarmed groundskeeper making their rounds.
+
+You assure him there's no cause for distress, blaming your situation on a mild case of the vapours, but it's unlikely this encounter will go unspoken. [+SOP]
+
+[[* * *|this.goto('')]]
+
+::refresh
+After a quick break, you're back to your stroll, refreshed and ready to go. [+VIM]
+
+[[* * *|this.goto('')]]

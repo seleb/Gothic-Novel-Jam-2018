@@ -19,7 +19,7 @@ import {
 	dim,
 } from '../reducers/stats';
 
-import source from '../assets/script.strand';
+import source from '../assets/script';
 
 let dispatch;
 let getState;
