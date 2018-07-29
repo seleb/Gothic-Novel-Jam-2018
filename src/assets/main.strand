@@ -1,5 +1,6 @@
-// ::start
+::start
 
+[[go|this.goto('week-0')]]
 
 
 ::main
@@ -12,12 +13,3 @@ Sometime that week, you find a day to yourself.
 You could spend it [[researching your condition]], [[going for a stroll]], or [[attending to family affairs]].
 
 Consulting the calendar, you see that you have roughly <<print ['four weeks','three weeks','two weeks','one week'][this.flag('week')]>> left before the next full moon.
-
-
-::start
-<<do this.flag('week', 0)>>
-[[eat breakfast]]
-[[summer heat]]
-[[go|this.goto('week-0')]]
-
-
