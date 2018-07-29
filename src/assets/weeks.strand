@@ -55,7 +55,7 @@ Your stomach growls as the meal is served. You can feel the saliva pooling in yo
 ::You eat well that morning.
 The steward does not comment further on the peculiarity of your carnivorous request — at least not to your face. [+SOP]
 
-[[* * *]]
+[[* * *|this.goto('free time')]]
 
 ::something light
 You make your wish known, and make your toilet for the day.
@@ -72,4 +72,4 @@ It's a familiar taste. A [[pleasant]] one.
 ::pleasant
 You can't help but wish it were anything else. [+IRE]
 
-[[* * *]]
+[[* * *|this.goto('free time')]]

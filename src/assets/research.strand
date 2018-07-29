@@ -19,14 +19,14 @@ Some describe the ingestion of magical concoctions, or recital of rituals, both 
 
 The tales only get taller as you read on. [+DIM]
 
-[[* * *]]
+[[* * *|this.goto('main')]]
 
 ::similar stories
 It's certainly not the source of your own trouble, but you do wonder if there is truth to the stories nonetheless. The common superstition of the full moon causing transformation was fact; why not this as well?
 
 You make a mental note of the idea; it may not yet be relevant, but should the situation arise it would be most valuable to know if and how to spread your affliction. [+WIT] [+FUR]
 
-[[* * *]]
+[[* * *|this.goto('main')]]
 
 ::happenstance of birth
 Legends and superstitions of this sort vary wildly in both specificity and believability. There is talk of werewolves being the curse of seventh-sons (you are neither seventh nor son), the curse of seventh-sons spawned of seventh-sons (your father was an only child), the curse of such-and-such date or this-and-that month (none of which match your own date of birth)...
@@ -44,7 +44,7 @@ It's a theory worth considering, but best not be too hasty. Should the theory pr
 
 You'll keep quiet about this for the time being. [+WIT]
 
-[[* * *]]
+[[* * *|this.goto('main')]]
 
 ::articles of clothing
 There are a few tales of specific garments, usually hewn of wolfskin, which prompt the transformation of their wearers. The most notable account tells of a man some centuries past in possession of one such belt, who used it commit numerous atrocities in the name of the Devil.
@@ -61,9 +61,9 @@ They suppose the belt to be, at best, the delusion of a violent madman, and weig
 
 It's an interesting — though repulsive — read, but not particularly enlightening as to your own situation. [+DIM]
 
-[[Return your books.]]
+[[Return your books]].
 
-::Return your books.
+::Return your books
 You bring the records you've been inspecting back to the librarian. They glance at the tomes as you return them, and you see recognition in their eyes.
 
 "Oh I've read this one myself! Quite a dark record; such gruesome things they did, did they not?"
@@ -71,22 +71,20 @@ You bring the records you've been inspecting back to the librarian. They glance 
 "[[They certainly did.]]"
 
 ::They certainly did.
-<<if this.stat.dim > 0>>
-You elaborate, "It's horrible what they did to that poor man."
+<<if this.stat.dim > 0>>You elaborate, "It's horrible what they did to that poor man."
 
 Confusion flashes across the librarian's face for a moment.
 
 "I'm talking about what that foul beast did to all those poor women and children! Such a horrible creature has no place in this world."
 
 You think better of attempting to defend the accused werewolf. Sheepishly agreeing with their interpretation, you make a hasty retreat. [+DIM] [+IRE]
-<<else>>
-You elaborate, "The crimes described are horrible, and the court's response wasn't much better."
+<<else>>You elaborate, "The crimes described are horrible, and the court's response wasn't much better."
 
-You ask for their interpretation, and find that they perhaps had not read as closely as you, as the possibility of the accused's innocence doesn't cross their mind. You share a brief exchange on the unverifiable nuances of the case, and leave feeling as if you've given them a lot to think about. [+WIT]
+You ask for their interpretation, and find that they perhaps had not read as closely as you, as the possibility of the accused's innocence does not cross their mind. You share a brief exchange on the unverifiable nuances of the case, and leave feeling as if you've given them a lot to think about. [+WIT]
 <<endif>>
-[[* * *]]
+[[* * *|this.goto('main')]]
 
 ::dismiss it
 It's highly unlikely that your clothes have anything to do with it. You do not wear furs often, and of those you own, none are wolf fur. Even if they were, you think you'd remember if they had been bestowed upon you by the Devil Himself. [+WIT]
 
-[[* * *]]
+[[* * *|this.goto('main')]]
