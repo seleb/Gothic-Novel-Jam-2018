@@ -2,6 +2,7 @@
 export const STATS_SET = 'stats:set';
 export const STATS_CHANGE = 'stats:change';
 export const STATS_SET_SHOW = 'stats:show';
+export const STATS_SET_ENABLED = 'stats:enabled';
 export const STATS_RESET = 'stats:reset';
 
 // action creators
@@ -101,7 +102,7 @@ const initialState = {
 			'Staying true to your past.',
 			'Resisting temptation.',
 			'Internally conflicted.',
-			'The curse grows stronger by the day.',
+			'The curse makes itself known.',
 			'More wolf than woman.',
 			'But a speck of humanity remains.',
 		],
@@ -133,6 +134,7 @@ const initialState = {
 		],
 	},
 	show: false,
+	enabled: false,
 };
 
 export default function statsReducer(state = initialState, action) {
@@ -157,6 +159,11 @@ export default function statsReducer(state = initialState, action) {
 			return {
 				...state,
 				show: action.show,
+			};
+		case STATS_SET_ENABLED:
+			return {
+				...state,
+				enabled: action.enabled,
 			};
 		case STATS_RESET:
 			return {

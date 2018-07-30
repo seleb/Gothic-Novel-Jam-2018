@@ -1,5 +1,5 @@
 ::start
-<<do this.reset(); this.flag('week', 0)>>start
+<<do this.reset(); this.flag('week', 0);>>start
 
 [[go|this.goto('week-0')]]
 

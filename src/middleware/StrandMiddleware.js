@@ -95,6 +95,10 @@ class StrandE extends Strand {
 		dispatch(resetStats());
 		dispatch(resetFlags());
 	}
+
+	dispatch(action) {
+		dispatch(action);
+	}
 }
 // TODO: extend Strand and make it run more of its internals through redux
 export const strand = new StrandE({

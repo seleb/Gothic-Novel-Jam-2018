@@ -108,7 +108,7 @@ You go back to your books, but a few minutes later curiousity takes hold and you
 Perhaps she has [[something to say]] to you? Though something is telling you it may be wiser to [[depart before this escalates]].
 
 ::something to say
-There is something in her eyes — some ephemeral glint — which puts you on edge. She blinks, and the corners of her lips bend ever-so-slightly into a taut smile. A chill passes over you, and the hairs on the backs of your arms stand on edge.
+There is something in her eyes — some ephemeral glint — which puts you on edge. She blinks, and the corners of her lips bend ever-so-slightly into a taut smile. A chill passes over you, and the <<if this.stat.fur > 1>>thick <<elseif this.stat.gal > 1>>fine <<endif>>hairs on the backs of your arms stand on edge.
 
 You return her smile. Not a moment later, she has closed her book and is walking towards you. Your heart pounds in your chest.
 
@@ -147,7 +147,7 @@ It is unbecoming to so brazenly refuse such an invitation, but you feel you made
 [[* * *|this.goto('main')]]
 
 ::depart before this escalates
-There is something in her eyes — some ephemeral glint — which puts you on edge. She blinks, and the corners of her lips bend ever-so-slightly into a taut smile. A chill passes over you, and the hairs on the backs of your arms stand on edge.
+There is something in her eyes — some ephemeral glint — which puts you on edge. She blinks, and the corners of her lips bend ever-so-slightly into a taut smile. A chill passes over you, and the <<if this.stat.fur > 1>>thick <<elseif this.stat.gal > 1>>fine <<endif>>hairs on the backs of your arms stand on edge.
 
 Without so much as returning her smile, you gather your things and [[leave promptly]].
 

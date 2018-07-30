@@ -91,6 +91,7 @@ export class Stats extends Component {
 export function mapStateToStatsProps({
 	stats: {
 		show = false,
+		enabled = false,
 		...rest,
 	} = {},
 }) {

@@ -9,19 +9,20 @@ import Stats from './../Stats';
 
 export function Strand({
 	passage = [],
+	show = false,
+	enabled = false,
 	setShowStats,
 	finish,
-	show,
 }, { }) {
 	return (
 		<div className="strand">
 			<section className="passages-area" onClick={() => finish(passage.length)}>
 				{passage.map((entry, idx) => <Node {...entry} idx={idx} />)}
 			</section>
-			<section className="stats-area">
+			{enabled && <section className="stats-area">
 				<Stats />
 				<button className={`toggle ${show ? 'opened' : ''}`} onClick={event => { event.preventDefault(); event.stopPropagation(); setShowStats(!show) }} >{show ? '>' : '<'}</button>
-			</section>
+			</section>}
 		</div>
 	);
 }
@@ -32,10 +33,12 @@ export function mapStateToProps({
 	} = {},
 	stats: {
 		show = false,
+		enabled = false,
 	} = {},
 }) {
 	return {
 		show,
+		enabled,
 		passage,
 	};
 }
