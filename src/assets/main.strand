@@ -18,6 +18,6 @@ Made by [[Sean|window.open('https://seansleblanc.itch.io/', '_blank')]] for [[Go
 ::free time
 Sometime that week, you find a day to yourself.
 
-You could spend it [[researching your condition]], [[going for a stroll]], or [[attending to family affairs]].
+You could spend it [[researching your condition]], or [[attending to family affairs|this.goto('family-'+this.flag('week'))]].
 
 Consulting the calendar, you see that you have roughly <<print ['four weeks','three weeks','two weeks','one week'][this.flag('week')]>> left before the next full moon.
