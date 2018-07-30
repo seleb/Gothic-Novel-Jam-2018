@@ -100,7 +100,6 @@ class StrandE extends Strand {
 		dispatch(action);
 	}
 }
-// TODO: extend Strand and make it run more of its internals through redux
 export const strand = new StrandE({
 	renderer,
 	source: source
