@@ -70,14 +70,14 @@ The servant, clearly remembering their position, apologizes profusely and retrea
 ::question
 "Oh it's nothing for you to worry about dear. Just excuses of those who failed their duties and the superstitions of the weak-minded to back them up."
 
-This does little to ease your worries. You make a note to reading [[the local papers]] after your father has finished with them in hopes of learning more.
+This does little to ease your worries. You make a note to [[read the local papers|this.goto('Reading the local papers')]] after your father has finished with them in hopes of learning more.
 
 ::keep quiet
 You don't need to question your mother; you know all too well the subject of the morning's conflict. [+WIT]
 
-Reading [[the local papers]] after your father has finished with them confirms your suspicions, and adds some clarity to the events of last night.
+[[Reading the local papers]] after your father has finished with them confirms your suspicions, and adds some clarity to the events of last night.
 
-::the local papers
+::Reading the local papers
 "MONSTROUS CREATURE ON MURDEROUS RAMPAGE" reads an all-too bold headline on one of the inner pages.
 
 Apparently a number of cattle were killed late last night; their carcasses violently disembowled and eaten. This in itself is not too strange, though unfortunate, as wolves have been known to prowl the local forestry, but a number of witnesses came forward with more worrying tales: all described having seen a horrendous figure, wolf-like, but in the form of man, tearing its way through the night.
