@@ -23,8 +23,7 @@ export class Action {
 		action = '',
 		idx = -1,
 	}) {
-		// TODO: remove title (it's for debugging)
-		return <a className="action-node" onClick={this.evalAction} title={action}><TextNode idx={idx}>{text}</TextNode></a>;
+		return <a className="action-node" onClick={this.evalAction}><TextNode idx={idx}>{text}</TextNode></a>;
 	}
 }
 
