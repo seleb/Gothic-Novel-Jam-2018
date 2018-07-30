@@ -143,8 +143,26 @@ It's a familiar taste. A [[pleasant]] one.
 
 ::pleasant
 You can't help but wish it were anything else. [+IRE]
-
+<<if this.stat.ire > 1>>
+[[* * *|this.goto('rage')]]
+<<else>>
 [[* * *|this.goto('free time')]]
+<<endif>>
+
+::rage
+Your father calls for another piece of toast, and a servant begins slicing a loaf of bread. His knife slips, and nicks a finger on the opposing hand. It's nothing serious, but a small trickle of blood flows from the wound. [+IRE]
+
+The next thing you know, he is screaming, and you are [[biting down on flesh]].
+
+::biting down on flesh
+It takes the strength of three to wrench you off the poor boy, and you make certain that the digit comes with you.
+
+You [[lick the blood]] from your lips.
+
+::lick the blood
+You regain some modicum of self-control shortly after the outburst, but there's little you can do with it. You wonder how long it will take for the populace to declare you a monster.
+
+[[The End|this.goto('start')]]
 
 ::week-2
 week 2
