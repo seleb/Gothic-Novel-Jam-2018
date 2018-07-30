@@ -42,7 +42,14 @@ But then again, perhaps it would be better to [[avoid discussing your situation]
 <<do this.flag('happenstance of birth', true)>>
 
 ::ask your parents
-TODO: this
+You briefly consider this course of action, before reprimanding yourself for the preposterous idea. [+DIM]
+
+How could that possibly play out well!?
+"Why hello Papa, would you happen to be a vicious Lycanthrope? Oh and Mother too!"
+
+You think you'll keep this wild theory to yourself.
+
+[[* * *|this.goto('main')]]
 
 ::avoid discussing your situation
 It's a theory worth considering, but best not be too hasty. Should the theory prove false, acting upon it now could easily lead to an ill-fated inquest of your own affairs.
