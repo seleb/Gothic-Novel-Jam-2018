@@ -1,8 +1,15 @@
 ::start
-<<do this.reset(); this.flag('week', 0);>>start
+<<do this.reset(); this.flag('week', 0);>>THE LADY'S BOOK OF DECENCY
+A Practical Treatise on Manners, Feeding, and Etiquette
 
-[[go|this.goto('week-0')]]
+[[New game|this.goto('week-0')]]
 
+[[About]]
+
+::About
+Made by [[Sean|window.open('https://seansleblanc.itch.io/', '_blank')]] for [[Gothic Novel Jam 2018|window.open('https://itch.io/jam/gothic-novel-jam', '_blank')]]
+
+[[Back|this.back()]]
 
 ::main
 [[A week passes.|this.goto('week-'+this.flag('week'))]]
