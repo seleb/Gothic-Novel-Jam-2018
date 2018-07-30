@@ -1,8 +1,72 @@
 ::family-0
-todo: this
+<<do this.flag('letters', true)>>Despite the gravity of your situation, you think it best to keep up with your regular affairs.
+
+Your mother reminds you that it's been an age since you corresponded with your cousins across the way, and suggests you spend the day [[pen in hand]].
+
+::pen in hand
+She is correct of course, as your cousins are terrible bores, and you regularly refrain penning them letters so that you may avoid reading their replies.
+
+Nevertheless, it would be improper to refute your mother's suggestion at this point, and you [[settle yourself]] at the writing desk. [+FOP]
+
+::settle yourself
+If only your father had seen fit to invest in a typewriter, the long work may have gone much quicker. You have quite a few distant relatives, and writing to all will be no less than a slog with but parchment and inkwell. [+IRE]
+
+You could [[keep it mundane]] and talk only of trivialities and the family business, or you could [[have a bit of fun]] with it and hint at all the recent excitement.
+
+::keep it mundane
+The work takes its toll on your morale, but you suffer through it. [+IRE]
+
+Multiple letters discussing weather, birthdays, and other such tripe later, and you have finished your task. 
+
+[[* * *|this.goto('main')]]
+
+::have a bit of fun
+Mixed in with the boring familial pleasantries, you include a few exagerrated descriptions of the supposed wolfman terrorizing the local countryside.
+
+It's all quite fantastic, and you giggle with glee at the thought of their response to something so unseemly in their everyday correspondence. [+SOP]
+<<do this.flag('had fun', true)>>
+[[* * *|this.goto('main')]]
 
 ::family-1
-todo: this
+Had you left the house earlier you may have avoided it, but today there is to be no choice as to how you will occupy your time, for the heads of the family are [[off to Church]], and you along with them.
+
+::off to Church
+Entering His house is a strange experience given recent events, but one you are glad for. [+GAL]
+
+You sit through a (relatively) short sermon, and then follow the others to the [[confessional]].
+
+::confessional
+You are unsure of how a man of the cloth would react to what you have to say. Confession has never been strictly mandatory with your family, but it is expected.
+
+You could likely [[skip the session]] without reprimand, though to do so would simply be yet another sin to [[confess]].
+
+::skip the session
+Though it may weigh on your conscience, you cannot risk sharing what you have become. The priest may be bound to silence by faith, but surely the Church has no room for a monster such as yourself. [+FUR]
+
+No one comments on your reluctance, but it does earn you some dirty looks. [+SOP]
+
+[[* * *|this.goto('main')]]
+
+::confess
+You wait your turn, enter the booth, and say the words you have said many times before.
+
+When it comes time to list your sins, you consider just [[how much]], or [[how little]], of the truth to tell.
+
+::how much
+You tell all there is to tell, at least to the best of your ability.
+
+You say you believe you were involved in the slaughter of those animals a fortnight past; the priest asks how so. You say you became a ravenous beast under the light of the moon; he says nothing. You say you woke up the next morning, body sore and hunger satiated; he responds that it is not necessary to confess sins committed in dreams, however vivid they may be.
+
+You start to protest his suggestion, but having put it all into words, you realize how ridiculous it all must sound. You can't help but doubt your own memory. [+GAL]
+
+[[* * *|this.goto('main')]]
+
+::how little
+You are not untruthful, you simply do not tell the whole truth. This is a weak rationalization, but it comforts you somewhat as you confess to venial sins.
+
+You say your Hail Marys and your goodbyes.
+
+[[* * *|this.goto('main')]]
 
 ::family-2
 There is surprisingly little to do today. Both your parents are away from the house on some business which concerns you none, and the governess seems to <<if this.stat.fop > 1>>be impressed enough with your progress to cut lessons short.<<else>>have given up — if only briefly — on molding your behaviour.<<endif>>
@@ -14,9 +78,9 @@ The summer brings with it a dreadful heat — at first a wave, then a persistent
 
 On this particularly sunny afternoon, you stop momentarily to cool off under the cover of a lonely willow. The shade does little to help. Without thinking, your tongue lolls out of your mouth.
 
-It takes a moment for the reality of the reflex to hit you: [[Ladies do not pant!]] But then again, [[no one is watching]]...
+It takes a moment for the reality of the reflex to hit you: [[Ladies do not pant]]! But then again, [[no one is watching]]...
 
-::Ladies do not pant!
+::Ladies do not pant
 Catching yourself, you quickly withdraw the errant muscle. You pull a handkerchief from your purse and dab a stray bit of saliva from your lips. [+GAL]
 
 Spurred on by this embarrassing lapse of poise, you return to your stroll and commit to enduring the heat — like a proper lady. [+ILL] [+FOP]
@@ -63,5 +127,20 @@ After a quick break, you're back to your stroll, refreshed and ready to go. [+VI
 [[* * *|this.goto('main')]]
 
 ::family-3
-todo: this
+<<if this.flag('letters')>>The post carries with it today a number of letters addressed to you personally.
+
+Apparently your cousins have deigned to [[answer your correspondence]].
+<<else>><<do this.flag('letters', true)>>Despite the gravity of your situation, you think it best to keep up with your regular affairs.
+
+Your mother reminds you that it's been an age since you corresponded with your cousins across the way, and suggests you spend the day [[pen in hand]].<<endif>>
+
+::answer your correspondence
+<<if this.flag('had fun')>>There is little of interest in the happenings of their own lives, but many are filled with questions of the monster stalking the woods of your homestead.
+
+The words on the pages, bare in their naivete, give you strength as you read on with glee. You can almost picture the shock and amazement on their faces. [+VIM]
+<<else>>Their replies are equally, if not more dry than the letters you sent. They are a chore to read, and far too many end on a question to prompt yet further replies.
+
+The words sap your energy, and drain you of the will to do anything else that day. [+IRE]
+<<endif>>
+[[* * *|this.goto('main')]]
 

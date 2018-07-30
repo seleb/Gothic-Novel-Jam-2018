@@ -100,7 +100,7 @@ He mentions that he will be sending one of the girls to grocery at the local mar
 
 "Is there anything in particular the young lady desires this morn?"
 
-You recall your hunger from the previous night, and consider asking for [[something bloody]], though you should probably go with [[something light]] to avoid suspicion.
+You recall your hunger from the previous night, and consider asking for [[something bloody]], though it would be more fitting to go with [[something light]].
 
 ::something bloody
 You're absolutely famished. You ask him to pick out the finest cut of beef on offer.
@@ -165,11 +165,55 @@ You regain some modicum of self-control shortly after the outburst, but there's 
 [[The End|this.goto('start')]]
 
 ::week-2
-week 2
+The governess has been stricter in her lessons as of late.
 
-[[free time]]
+She has taken to long bouts of lecturing about how to converse with men of various social stature, and insists upon the practice of either [[dance]] or [[piano playing]] ad nauseum.
+
+::dance
+The dances grow tiresome on repetition, but there is a basic fun to the act, and the regular exercise does your body good. [+VIM]
+
+You have in particular taken a liking to the polonaise, but practice of the waltz is [[enforced]] more often. 
+
+::piano playing
+The upright piano in your family home does not compare to the larger variety used in great halls, but it is serviceable. [+FOP]
+
+You prefer to perform with your hands alone, but often singing is [[enforced]] as well.
+
+::enforced
+You later learn the reason for the uptick in resolve: there is to be a grand ball in two weeks time! And curse your luck, but of course it is to be held on the very night the moon will be at its fullest!
+
+It is as if coincidence manifest conspires against you to layer complications on your existing troubles.
+
+[[* * *|this.goto('free time')]]
 
 ::week-3
-week 3
+The news of the previous week continues to upset you greatly. It will be extraordinarily difficult to keep your situation a secret while also attending a ball. Unsure of how to deal with this complication, you commit yourself to [[inventing some reason]] as to why you will not be able to attend.
 
-[[free time]]
+::inventing some reason
+You could [[feign illness]] to spend the day in bed; you could attempt to [[arrange a conflicting event]]; you could simply [[run away]]...
+
+Whatever you choose will likely require at least some amount of preparation.
+
+::feign illness
+You resolve to avoid the ball under guise of rest and recuperation.
+
+With luck, you'll be able to secure syrup of ipecac to strengthen the deceit, but should it be too difficult, a solution of brine will likely suffice.<<do this.flag('illness',true)>>
+
+[[* * *|this.goto('free time')]]
+
+::arrange a conflicting event
+You resolve to host your own get-together, that you might better control your situation on the day which you will be most vulnerable.
+
+You draw up invitations and have them posted at your earliest convenience.<<do this.flag('conflict',true)>>
+
+[[* * *|this.goto('free time')]]
+
+::run away
+You resolve to run away, come day of the ball. You spend time that week ensuring you will not want for food, money, or aught else of essentials for at least a short while after making your escape.
+
+You are uncertain if or when you will be able to return, but prepare for the worst.<<do this.flag('run away',true)>>
+
+[[* * *|this.goto('free time')]]
+
+::week-4
+The day of the ball has arrived. 
