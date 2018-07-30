@@ -1,8 +1,17 @@
 ::week-0
+A lady should not wander the woods alone. She should especially not do so after dark.
 
-You feel [[unnaturally aware]] of the changes occurring in your body.
+Perhaps the governess had not yet reached this lesson, as this is where you [[find yourself]] tonight.
 
-::unnaturally aware
+::find yourself
+A lady should be aware of her surroundings always.
+
+You wonder which of the two is more or less ladylike: to have retained your sense of direction, or to have ignored the full glory of the [[moon shining bright]] this eve.
+
+::moon shining bright
+It is when you are lost in thought, staring at the radiant circle, that [[the changes]] begin.
+
+::the changes
 They're subtle at first, but they [[grow more intense]] by the second.<<do this.dispatch({type:'stats:enabled',enabled:true});setTimeout(()=>{this.dispatch({type:'stats:show',show:true});},100);>>
 
 ::grow more intense
