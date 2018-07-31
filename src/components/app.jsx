@@ -11,7 +11,6 @@ export default function App({ }, { }) {
 		<div class="app">
 			<main>
 				<Strand />
-				<Debug />
 			</main>
 			<footer>
 				<h1><SmallCaps>The Lady's Book Of Decency</SmallCaps></h1>
