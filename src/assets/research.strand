@@ -143,7 +143,7 @@ She bids you adieu and takes her leave.
 You feel somewhat guilty when you remember that this promise may very well be an empty one. Your freedom of action in the following week lies quite heavily on whatever shall occur during the upcoming full moon.
 
 The thought lingers, and spoils your mood the rest of the day.
-
+<<do this.flag('gal',true)>>
 [[* * *|this.goto('main')]]
 
 ::think it unwise

@@ -187,33 +187,193 @@ It is as if coincidence manifest conspires against you to layer complications on
 [[* * *|this.goto('free time')]]
 
 ::week-3
-The news of the previous week continues to upset you greatly. It will be extraordinarily difficult to keep your situation a secret while also attending a ball. Unsure of how to deal with this complication, you commit yourself to [[inventing some reason]] as to why you will not be able to attend.
+The news of the previous week continues to upset you greatly. It will be extraordinarily difficult to keep your situation a secret while also attending a ball.
 
-::inventing some reason
-You could [[feign illness]] to spend the day in bed; you could attempt to [[arrange a conflicting event]]; you could simply [[run away]]...
+To make matters worse, you are apparently expected to attend whilst attached to [[one of your suitors]] as well!
 
-Whatever you choose will likely require at least some amount of preparation.
+::one of your suitors
+You protest this at first, but are rebuked swiftly and strictly:
 
-::feign illness
-You resolve to avoid the ball under guise of rest and recuperation.
+"It is unbecoming of a lady to attend such events unnaccompanied."
 
-With luck, you'll be able to secure syrup of ipecac to strengthen the deceit, but should it be too difficult, a solution of brine will likely suffice.<<do this.flag('illness',true)>>
+The governess hands you a small folio of invitations. She is at the very least leaving it to you [[whose to accept]], but [[choosing none]] will likely just result in one being chosen for you.
 
+::whose to accept
+The invitations are all from acquantainces, most of which you have only met once. It would be insulting, were you a more socially active lady, to even consider the hands of those who have no claim to knowing you more intimately. However, you have been relatively reclusive as of late and cannot expect familiarity which does not exist.
+
+You are [[insulted anyway]]. [+IRE]
+
+::insulted anyway
+As it is, you will have to make do with the selection you have been offered. You spend some time attempting to come up with some noteworthy criteria upon which to make a decision, but there is little to base this on, unless you are wont to draw conclusions of a man based on the quality of his penmanship.
+
+You end up tossing the papers in the air, and select the author of the last to touch the floor.
+<<do this.flag('picked date', true)>>
 [[* * *|this.goto('free time')]]
 
-::arrange a conflicting event
-You resolve to host your own get-together, that you might better control your situation on the day which you will be most vulnerable.
+::choosing none
+There is little difference who you choose, for not a one of them is to your liking.
 
-You draw up invitations and have them posted at your earliest convenience.<<do this.flag('conflict',true)>>
+In an effort to make things more difficult for those who would make the decision in your place, you bundle the papers up and toss them in the furnace.
 
-[[* * *|this.goto('free time')]]
-
-::run away
-You resolve to run away, come day of the ball. You spend time that week ensuring you will not want for food, money, or aught else of essentials for at least a short while after making your escape.
-
-You are uncertain if or when you will be able to return, but prepare for the worst.<<do this.flag('run away',true)>>
+It is unlikely to have much of an effect, as they have certainly all been read and a hopeful favourite been chosen before you, but it makes you feel better anyway. [+VIM]
 
 [[* * *|this.goto('free time')]]
 
 ::week-4
-The day of the ball has arrived. 
+The day of the full moon has arrived, and with it, the ball.
+
+It's going to be difficult enough to avoid disaster this eve without being embroiled in the affairs of high society as well.
+
+You have much of the morning to yourself, under the expectation that you are [[preparing for the event]]. Though it may be easier to attempt some method of [[avoiding it]] entirely...
+
+::preparing for the event
+You arrange your outfit for the night, consider your choice of perfume, and spend the rest of the day dreading the worst. [+IRE]
+
+Late in the day, the steward knocks on your door and informs you that your [[suitor has arrived]].
+
+::avoiding it
+You decide that you shall not be attending the ball. It's unlikely you'll be able to [[simply decline]], however. You'll likely need a reason. Perhaps you could [[feign illness]]?
+
+::feign illness
+You resolve to avoid the ball under guise of rest and recuperation.
+<<if this.stat.ill > 0>>
+Luckily it won't require much deception — the past month has not been kind to your [[physical well-being]].
+<<else if this.stat.wit > 1>>
+With luck, you'll be able to secure syrup of ipecac to [[strengthen the deceit]], but should it be too difficult, a solution of brine will likely suffice.
+<<else>>
+You practice a few false coughs. You're unsure of your acting ability, but this [[may work]].
+<<endif>>
+
+::physical well-being
+You stay in bed all morning, and return to sleep.
+
+The steward wakes you a few hours later, and for the first time all week, you make no efforts in concealing the [[amount of duress]] you're under.
+
+::strengthen the deceit
+You manage to sneak downstairs and before anyone is the aware of your presence, stealthily relieve the medicinal cabinet of the vial you're after.
+
+Downing the concoction has an almost immediate effect: within moments you are [[noisily recalling|this.goto('amount of duress')]] last night's meal.
+
+::amount of duress
+The servants are quite distressed at your aches and moans, and rush to ensure your comfort is attended to. You are wrapped in blankets, and served strong motherwort tea.
+
+"But what about the ball?" you murmur weakly through the commotion.
+
+They insist you rest. There will be [[no ball for you]] today. [+WIT]
+
+::no ball for you
+Unfortunately, your plan succeeds a little too well. You are caught up in bed all day, and your every effort to abscond is foiled by servants hustling you back to keep you from any strenuous activity.
+
+The hours drag on, and your anxiety heightens, all too aware of the sun setting late in the afternoon. The steward attributes your fidgetting to a growing fever, and is all the more insistent on your [[staying put]].
+
+::staying put
+The night falls, and as do your spirits. It will be happening any moment now, of that you're certain, you simply don't know when.
+
+You sit in your room, with none but the governess keeping you company.
+
+A gust of wind blows through the night air. Trees rustle and shake, their limbs swaying in the forceful breeze. The curtains are set aflutter, and the light of the [[moon shines through]].
+
+::moon shines through
+You wonder if it will be her word, or her remains which point to your guilt the following morning.<<do this.plus.fur();this.plus.fur();this.plus.fur();this.plus.fur();this.plus.fur();this.plus.fur();>>
+
+[[The End|this.goto('start')]]
+
+::may work
+[[It does not work|this.goto('that idea')]]. [+DIM]
+
+::simply decline
+On the other hand, perhaps asserting yourself is all that it will take.
+
+You march downstairs, still in your nightclothes, find the governess, and say matter-of-factly that [[you will not]] be attending the ball tonight.
+
+::you will not
+"Oh? May I ask why not, young miss?"
+<<if this.stat.wit > 1 && this.stat.sop > 1>>
+You say that you have no intention of [[being the laughingstock]] of the evening.
+<<elseif this.stat.fop > 1>>
+You say that there will be far too many in attendance of ignoble blood, and that you have no wish to associate with them. You are [[firm in your words]].
+<<else>>
+The question catches you off-guard. Perhaps you did need [[a reason]].
+<<endif>>
+
+::being the laughingstock
+You are aware of rumours circulating that paint you in poor light, and true or false, you are simply too far behind on your lessons to dispell them. [+WIT]
+
+"Are you certain miss? I do believe you shall have a good time, but if you truly believe that to be the case, you shall not be forced."
+
+[[You are certain]].
+
+::firm in your words
+You are a lady of the house after all, and your will carries with it a certain degree of deserved respect. [+FOP]
+
+The governess is taken aback at your sudden refusal.
+
+"Are you certain miss? I do believe you shall have a good time, but if you truly believe that to be the case, you shall not be forced."
+
+[[You are certain]].
+
+::a reason
+You respond that you simply do not wish to go.
+
+"Nonsense! It is the duty of a lady to represent her family at such events. I'll hear no more of it."
+
+So much for [[that idea]]. [+DIM]
+
+::that idea
+There is little else you can do but resign to your schedule for the time being.
+
+Looks like you'll be [[going to the ball|this.goto('preparing for the event')]] after all.
+
+::suitor has arrived
+To your surprise, your date is not quite as awful as you had imagined. He is handsome, carries himself with dignity, and speaks in only the most flattering of tones on your way to the ball. <<if this.flag('picked date')>>Your fortune must not be all bad.<<else>>Perhaps the governess has better taste than she lets on.<<endif>>
+
+Granted, he is far too old and — you quickly learn — too leering for your liking, but his words are kind and he does not impose his will upon you.
+
+You do not believe he would even make a serious attempt at stopping you should you [[abandon him]] and continue the night alone, though he'd certainly prefer [[you stay]].
+
+::you stay
+You enjoy a few dances, sing a few songs, share more than a few laughs with the gentleman. Despite yourself, you manage to have a good time.
+
+At one point, he excuses himself from a conversation to light a cigar, and makes his way outside.
+
+Peering after him, you see that his pace slows on the path. It strikes you that he may be expecting you [[to follow]]. Perhaps he's better on his own; after all, you're still [[inside the crowded ballroom|this.goto('neglecting to rejoin him')]].
+
+::to follow
+The moon shines bright above as the two of you walk in silence.
+
+It does not take long for it's influence to [[change you]].
+
+::change you
+Despite all of his pretty looks and prettier words, this man is a mere morsel — you draw out the experience as long as possible, intent on savoring it.
+
+If the governess were here, she'd certainly point out that it's rude to play with your food — then again she'd have quite a lot more to say if she was aware of your [[current predicament]].
+<<do this.plus.fur();this.plus.fur();this.plus.fur();this.plus.fur();this.plus.fur();this.plus.fur();this.plus.fur();>>
+::current predicament
+Later that night you turn into a wolf and eat him.
+
+[[The End|this.goto('start')]]
+
+::abandon him
+You spend some time with him, making sure to at least allow the privilege of the first dance, before excusing yourself to the powder room and [[neglecting to rejoin him]] upon re-entrance.
+
+::neglecting to rejoin him
+It is a strange feeling, to be so surrounded by people and feel so alone.
+<<if this.flag('gal')>>
+You are shaken from your reverie when your eyes meet a familiar pair across the room. The mouth below them soon forms a similarly familiar [[smile|this.plus.gal();this.plus.gal();this.plus.gal();this.plus.gal();this.plus.gal();this.plus.gal();this.goto('smile');]].
+<<else if this.stat.fop > 1>>
+They move in choreographed unison, and you along with them. They speak of politics, and you nod along politely. They tell jokes, and you chuckle. <<if this.stat.wit > 1>>You even tell a few of your own.<<endif>>
+
+The mood is one of levity, of cheer. It threatens to swallow you up, to smother your fears in the lightness of [[hearts around you]].
+<<else>>
+They move in choreographed unison, and you stumble along. They speak of politics, and you nod along politely. They tell jokes, and you don't quite see the humour in them. <<if this.stat.wit > 1>>You tell a few of your own, and are met with queer stares before the conversation moves on.<<endif>>
+
+The mood is one of levity, of cheer. It fails to penetrate your thoughts: the severity of your troubles is far too much for the lightness of [[hearts around you]].
+<<endif>>
+
+::hearts around you
+[[Beating hearts|this.goto('smile')]], pumping [[vibrant life|this.goto('smile')]] through [[healthy bodies|this.goto('smile')]].<<do this.plus.fur();this.plus.fur();this.plus.fur();this.plus.fur();this.plus.fur();this.plus.fur();this.plus.fur();>>
+
+::smile
+Perhaps this night will not be so bad after all.
+
+[[The End|this.goto('start')]]
