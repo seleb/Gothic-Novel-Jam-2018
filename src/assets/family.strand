@@ -21,7 +21,7 @@ Multiple letters discussing weather, birthdays, and other such tripe later, and 
 [[* * *|this.goto('main')]]
 
 ::have a bit of fun
-Mixed in with the boring familial pleasantries, you include a few exagerrated descriptions of the supposed wolfman terrorizing the local countryside.
+Mixed in with the boring familial pleasantries, you include a few exaggerated descriptions of the supposed wolfman terrorizing the local countryside.
 
 It's all quite fantastic, and you giggle with glee at the thought of their response to something so unseemly in their everyday correspondence. [+SOP]
 <<do this.flag('had fun', true)>>
@@ -137,7 +137,7 @@ Your mother reminds you that it's been an age since you corresponded with your c
 ::answer your correspondence
 <<if this.flag('had fun')>>There is little of interest in the happenings of their own lives, but many are filled with questions of the monster stalking the woods of your homestead.
 
-The words on the pages, bare in their naivete, give you strength as you read on with glee. You can almost picture the shock and amazement on their faces. [+VIM]
+The words on the pages, bare in their naiveté, give you strength as you read on with glee. You can almost picture the shock and amazement on their faces. [+VIM]
 <<else>>Their replies are equally, if not more dry than the letters you sent. They are a chore to read, and far too many end on a question to prompt yet further replies.
 
 The words sap your energy, and drain you of the will to do anything else that day. [+IRE]

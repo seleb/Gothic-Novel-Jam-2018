@@ -1,7 +1,6 @@
 import Strand from 'strand-core';
 
 import {
-	STRAND_INIT,
 	displayPassage,
 	setFlag,
 	STRAND_ACTION_EVAL,

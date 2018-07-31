@@ -4,7 +4,7 @@ You decide to visit the library, and see if there is aught to learn of your cond
 ::written word
 It's difficult to find many books which treat the topic as more than simple fodder for a trite tale of heroes and monsters. Harder still to find anything that seems remotely reliable.
 <<if this.flag('curious taint') && this.flag('happenstance of birth') && this.flag('articles of clothing')>>
-You flip through pages absent-mindedly... You've all but exhausted the resources at your disposal here. Boredome taking charge, you glance about the library.
+You flip through pages absent-mindedly... You've all but exhausted the resources at your disposal here. Boredom taking charge, you glance about the library.
 
 Your many hours spent here have made it a familiar sight; you've even begun to recognize some of the other patrons. Come to think of it, [[that woman]] seated in the corner has been here each day that you have, and is one of the only souls you've seen perusing the same sections as you.
 <<else>>

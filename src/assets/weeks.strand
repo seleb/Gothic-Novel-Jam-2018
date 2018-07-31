@@ -45,7 +45,7 @@ You only know that when you wake up the next morning, looking the same as ever, 
 [[* * *|this.goto('morning')]]
 
 ::morning
-Lay in bed, with no evidence to the contrary, you are quick to dismiss your recollection of the previous night as but a nightmare. A terrible one which you shant hope to repeat, but no cause for real concern.
+Lay in bed, with no evidence to the contrary, you are quick to dismiss your recollection of the previous night as but a nightmare. A terrible one which you shan't hope to repeat, but no cause for real concern.
 
 You make your way downstairs to [[join the family]] for breakfast.
 
@@ -59,7 +59,7 @@ This last [[shakes you]].
 ::shakes you
 Your mother turns, and seeing you in the doorframe, redoubles her anger:
 
-"Again with this blather! Look at what your carelessness has wraught — the poor girl's white as a sheet!"
+"Again with this blather! Look at what your carelessness has wrought — the poor girl's white as a sheet!"
 
 "But—"
 
@@ -80,7 +80,7 @@ You don't need to question your mother; you know all too well the subject of the
 ::Reading the local papers
 "MONSTROUS CREATURE ON MURDEROUS RAMPAGE" reads an all-too bold headline on one of the inner pages.
 
-Apparently a number of cattle were killed late last night; their carcasses violently disembowled and eaten. This in itself is not too strange, though unfortunate, as wolves have been known to prowl the local forestry, but a number of witnesses came forward with more worrying tales: all described having seen a horrendous figure, wolf-like, but in the form of man, tearing its way through the night.
+Apparently a number of cattle were killed late last night; their carcasses violently disemboweled and eaten. This in itself is not too strange, though unfortunate, as wolves have been known to prowl the local forestry, but a number of witnesses came forward with more worrying tales: all described having seen a horrendous figure, wolf-like, but in the form of man, tearing its way through the night.
 
 Any sensible person would write it off as hogwash. Unfortunately you know better.
 
@@ -167,14 +167,14 @@ You regain some modicum of self-control shortly after the outburst, but there's 
 ::week-2
 The governess has been stricter in her lessons as of late.
 
-She has taken to long bouts of lecturing about how to converse with men of various social stature, and insists upon the practice of either [[dance]] or [[piano playing]] ad nauseum.
+She has taken to long bouts of lecturing about how to converse with men of various social stature, and insists upon the practice of either [[dance]] or [[piano-playing]] ad nauseam.
 
 ::dance
 The dances grow tiresome on repetition, but there is a basic fun to the act, and the regular exercise does your body good. [+VIM]
 
 You have in particular taken a liking to the polonaise, but practice of the waltz is [[enforced]] more often. 
 
-::piano playing
+::piano-playing
 The upright piano in your family home does not compare to the larger variety used in great halls, but it is serviceable. [+FOP]
 
 You prefer to perform with your hands alone, but often singing is [[enforced]] as well.
@@ -194,12 +194,12 @@ To make matters worse, you are apparently expected to attend whilst attached to 
 ::one of your suitors
 You protest this at first, but are rebuked swiftly and strictly:
 
-"It is unbecoming of a lady to attend such events unnaccompanied."
+"It is unbecoming of a lady to attend such events unaccompanied."
 
 The governess hands you a small folio of invitations. She is at the very least leaving it to you [[whose to accept]], but [[choosing none]] will likely just result in one being chosen for you.
 
 ::whose to accept
-The invitations are all from acquantainces, most of which you have only met once. It would be insulting, were you a more socially active lady, to even consider the hands of those who have no claim to knowing you more intimately. However, you have been relatively reclusive as of late and cannot expect familiarity which does not exist.
+The invitations are all from acquaintances, most of which you have only met once. It would be insulting, were you a more socially active lady, to even consider the hands of those who have no claim to knowing you more intimately. However, you have been relatively reclusive as of late and cannot expect familiarity which does not exist.
 
 You are [[insulted anyway]]. [+IRE]
 
@@ -250,7 +250,7 @@ You stay in bed all morning, and return to sleep.
 The steward wakes you a few hours later, and for the first time all week, you make no efforts in concealing the [[amount of duress]] you're under.
 
 ::strengthen the deceit
-You manage to sneak downstairs and before anyone is the aware of your presence, stealthily relieve the medicinal cabinet of the vial you're after.
+You manage to sneak downstairs and before anyone is aware of your presence, and stealthily relieve the medicinal cabinet of the vial you're after.
 
 Downing the concoction has an almost immediate effect: within moments you are [[noisily recalling|this.goto('amount of duress')]] last night's meal.
 
@@ -264,7 +264,7 @@ They insist you rest. There will be [[no ball for you]] today. [+WIT]
 ::no ball for you
 Unfortunately, your plan succeeds a little too well. You are caught up in bed all day, and your every effort to abscond is foiled by servants hustling you back to keep you from any strenuous activity.
 
-The hours drag on, and your anxiety heightens, all too aware of the sun setting late in the afternoon. The steward attributes your fidgetting to a growing fever, and is all the more insistent on your [[staying put]].
+The hours drag on, and your anxiety heightens, all too aware of the sun setting late in the afternoon. The steward attributes your fidgeting to a growing fever, and is all the more insistent on your [[staying put]].
 
 ::staying put
 The night falls, and as do your spirits. It will be happening any moment now, of that you're certain, you simply don't know when.
@@ -297,7 +297,7 @@ The question catches you off-guard. Perhaps you did need [[a reason]].
 <<endif>>
 
 ::being the laughingstock
-You are aware of rumours circulating that paint you in poor light, and true or false, you are simply too far behind on your lessons to dispell them. [+WIT]
+You are aware of rumours circulating that paint you in poor light, and true or false, you are simply too far behind on your lessons to dispel them. [+WIT]
 
 "Are you certain miss? I do believe you shall have a good time, but if you truly believe that to be the case, you shall not be forced."
 
@@ -341,7 +341,7 @@ Peering after him, you see that his pace slows on the path. It strikes you that 
 ::to follow
 The moon shines bright above as the two of you walk in silence.
 
-It does not take long for it's influence to [[change you]].
+It does not take long for its influence to [[change you]].
 
 ::change you
 Despite all of his pretty looks and prettier words, this man is a mere morsel — you draw out the experience as long as possible, intent on savoring it.
