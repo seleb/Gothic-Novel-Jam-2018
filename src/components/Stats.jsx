@@ -92,7 +92,7 @@ export function mapStateToStatsProps({
 	stats: {
 		show = false,
 		enabled = false,
-		...rest,
+		...rest
 	} = {},
 }) {
 	return {
