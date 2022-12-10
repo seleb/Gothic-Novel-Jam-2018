@@ -80,7 +80,7 @@ You bring the records you've been inspecting back to the librarian. They glance 
 
 "Oh I've read this one myself! Quite a dark record; such gruesome things they did, did they not?"
 
-"[[They certainly did.]]"
+“[[They certainly did.]]”
 
 ::They certainly did.
 <<if this.stat.dim > 0>>You elaborate, "It's horrible what they did to that poor man."
@@ -119,7 +119,7 @@ There is something in her eyes — some ephemeral glint — which puts you on ed
 
 You return her smile. Not a moment later, she has closed her book and is walking towards you. Your heart pounds in your chest.
 
-"[[Hello]]."
+“[[Hello]].”
 
 ::Hello
 The two of you share a pleasant conversation about nothing in particular. <<if this.stat.dim > 0>>You stammer your way through most of it, though she doesn't seem to mind.
