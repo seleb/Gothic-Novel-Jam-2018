@@ -2,7 +2,6 @@ import { h, Component } from 'preact';
 
 import './app.css';
 import SmallCaps from './SmallCaps';
-import Stats from './Stats';
 import Strand from './strand/Strand';
 import Debug from './Debug';
 
