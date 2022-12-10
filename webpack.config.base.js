@@ -1,6 +1,5 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const CleanWebpackPlugin = require('clean-webpack-plugin');
 const package = require('./package');
 
 module.exports = {
@@ -25,33 +24,29 @@ module.exports = {
 				{
 					loader: 'postcss-loader',
 					options: {
-						plugins: [
-							require('autoprefixer')(),
-							require('postcss-clean')()
-						]
-					}
-				}
+						postcssOptions: {
+							plugins: [
+								require('autoprefixer')(),
+								require('postcss-clean')(),
+							],
+						},
+					},
+				},
 			]
 		}, {
 			test: /\.(png|woff)$/, // assets
-			use: {
-				loader: 'url-loader',
-				options: {
-					outputPath: 'assets/',
-					limit: Infinity // bytes
-				}
-			}
+			type: 'asset/inline',
 		}]
 	},
 	entry: {
 		index: './src/index.js'
 	},
 	output: {
-		filename: '[name].bundle.js',
+		filename: '[name].[contenthash].bundle.js',
+		clean: true,
 		path: path.resolve(__dirname, 'public')
 	},
 	plugins: [
-		new CleanWebpackPlugin(['public']), // cleans dist
 		new HtmlWebpackPlugin({ // creates index.html
 			title: package.description,
 			meta: {
