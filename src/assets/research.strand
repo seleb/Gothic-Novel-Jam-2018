@@ -110,7 +110,7 @@ You're not sure what she's reading, but it must be quite dense, as she hasn't tu
 <<if this.stat.fop > 1>>Your eyes meet for a brief moment, before she hastily looks away.
 <<else>>Your eyes meet for a brief moment, before you hastily look away. It's rude to stare. [+SOP]
 <<endif>>
-You go back to your books, but a few minutes later curiousity takes hold and you hazard another look. The situation has been reversed, and this time you catch her staring at you.
+You go back to your books, but a few minutes later curiosity takes hold and you hazard another look. The situation has been reversed, and this time you catch her staring at you.
 
 Perhaps she has [[something to say]] to you? Though something is telling you it may be wiser to [[depart before this escalates]].
 
