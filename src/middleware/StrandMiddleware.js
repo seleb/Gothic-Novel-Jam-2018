@@ -114,3 +114,6 @@ export const strand = new StrandE({
 	.replace(/\[\+DIM\]/g, '[+DIM]<<do this.plus.dim()>>'),
 });
 strand.goto('start');
+if (process.env.NODE_ENV === 'development') {
+	window.strand = strand;
+}
